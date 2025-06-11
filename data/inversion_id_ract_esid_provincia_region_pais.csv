@@ -1,0 +1,776 @@
+anio;nivel_agregacion;unidad_territorial;tipo_institucion_ract;monto_inversion;monto_inversion_constante_2004
+2019;Provincia;Buenos Aires;ESFL;70.60;2.30
+2019;Provincia;Catamarca;ESFL;0.00;0.00
+2019;Provincia;Chaco;ESFL;0.30;0.00
+2019;Provincia;Chubut;ESFL;18.00;0.60
+2019;Provincia;C.A.B.A.;ESFL;954.20;30.70
+2019;Provincia;Córdoba;ESFL;30.50;1.00
+2019;Provincia;Corrientes;ESFL;0.90;0.00
+2019;Provincia;Entre Ríos;ESFL;0.10;0.00
+2019;Provincia;Formosa;ESFL;0.10;0.00
+2019;Provincia;Jujuy;ESFL;0.00;0.00
+2019;Provincia;La Pampa;ESFL;0.00;0.00
+2019;Provincia;La Rioja;ESFL;0.00;0.00
+2019;Provincia;Mendoza;ESFL;20.80;0.70
+2019;Provincia;Misiones;ESFL;1.10;0.00
+2019;Provincia;Neuquén;ESFL;17.50;0.60
+2019;Provincia;Río Negro;ESFL;24.10;0.80
+2019;Provincia;Salta;ESFL;9.40;0.30
+2019;Provincia;San Juan;ESFL;0.00;0.00
+2019;Provincia;San Luis;ESFL;0.00;0.00
+2019;Provincia;Santa Cruz;ESFL;4.00;0.10
+2019;Provincia;Santa Fe;ESFL;12.50;0.40
+2019;Provincia;Santiago del Estero;ESFL;0.10;0.00
+2019;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;ESFL;0.00;0.00
+2019;Provincia;Tucumán;ESFL;5.40;0.20
+2019;Provincia;Buenos Aires;UPUB;6363.40;204.60
+2019;Provincia;Catamarca;UPUB;150.40;4.80
+2019;Provincia;Chaco;UPUB;260.90;8.40
+2019;Provincia;Chubut;UPUB;193.00;6.20
+2019;Provincia;C.A.B.A.;UPUB;6944.20;223.30
+2019;Provincia;Córdoba;UPUB;1481.80;47.60
+2019;Provincia;Corrientes;UPUB;258.10;8.30
+2019;Provincia;Entre Ríos;UPUB;436.30;14.00
+2019;Provincia;Formosa;UPUB;134.50;4.30
+2019;Provincia;Jujuy;UPUB;537.30;17.30
+2019;Provincia;La Pampa;UPUB;285.90;9.20
+2019;Provincia;La Rioja;UPUB;332.90;10.70
+2019;Provincia;Mendoza;UPUB;507.10;16.30
+2019;Provincia;Misiones;UPUB;370.00;11.90
+2019;Provincia;Neuquén;UPUB;275.30;8.90
+2019;Provincia;Río Negro;UPUB;548.40;17.60
+2019;Provincia;Salta;UPUB;210.90;6.80
+2019;Provincia;San Juan;UPUB;87.60;2.80
+2019;Provincia;San Luis;UPUB;931.40;29.90
+2019;Provincia;Santa Cruz;UPUB;287.70;9.30
+2019;Provincia;Santa Fe;UPUB;2466.40;79.30
+2019;Provincia;Santiago del Estero;UPUB;230.00;7.40
+2019;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;UPUB;101.10;3.30
+2019;Provincia;Tucumán;UPUB;908.90;29.20
+2019;Provincia;Buenos Aires;UPRI;264.20;8.50
+2019;Provincia;Catamarca;UPRI;0.00;0.00
+2019;Provincia;Chaco;UPRI;1.00;0.00
+2019;Provincia;Chubut;UPRI;0.00;0.00
+2019;Provincia;C.A.B.A.;UPRI;786.60;25.30
+2019;Provincia;Córdoba;UPRI;76.50;2.50
+2019;Provincia;Corrientes;UPRI;12.60;0.40
+2019;Provincia;Entre Ríos;UPRI;20.90;0.70
+2019;Provincia;Formosa;UPRI;1.20;0.00
+2019;Provincia;Jujuy;UPRI;0.00;0.00
+2019;Provincia;La Pampa;UPRI;0.00;0.00
+2019;Provincia;La Rioja;UPRI;1.40;0.00
+2019;Provincia;Mendoza;UPRI;72.60;2.30
+2019;Provincia;Misiones;UPRI;26.30;0.80
+2019;Provincia;Neuquén;UPRI;0.10;0.00
+2019;Provincia;Río Negro;UPRI;2.60;0.10
+2019;Provincia;Salta;UPRI;16.00;0.50
+2019;Provincia;San Juan;UPRI;2.90;0.10
+2019;Provincia;San Luis;UPRI;2.20;0.10
+2019;Provincia;Santa Cruz;UPRI;0.00;0.00
+2019;Provincia;Santa Fe;UPRI;54.90;1.80
+2019;Provincia;Santiago del Estero;UPRI;0.00;0.00
+2019;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;UPRI;0.50;0.00
+2019;Provincia;Tucumán;UPRI;16.70;0.50
+2019;Provincia;Buenos Aires;OCT;13828.40;444.70
+2019;Provincia;Catamarca;OCT;181.50;5.80
+2019;Provincia;Chaco;OCT;324.70;10.40
+2019;Provincia;Chubut;OCT;837.80;26.90
+2019;Provincia;C.A.B.A.;OCT;7546.40;242.70
+2019;Provincia;Córdoba;OCT;3284.70;105.60
+2019;Provincia;Corrientes;OCT;456.20;14.70
+2019;Provincia;Entre Ríos;OCT;556.70;17.90
+2019;Provincia;Formosa;OCT;170.40;5.50
+2019;Provincia;Jujuy;OCT;356.20;11.50
+2019;Provincia;La Pampa;OCT;250.20;8.00
+2019;Provincia;La Rioja;OCT;169.60;5.50
+2019;Provincia;Mendoza;OCT;1675.30;53.90
+2019;Provincia;Misiones;OCT;484.90;15.60
+2019;Provincia;Neuquén;OCT;198.80;6.40
+2019;Provincia;Río Negro;OCT;3013.20;96.90
+2019;Provincia;Salta;OCT;606.00;19.50
+2019;Provincia;San Juan;OCT;573.90;18.50
+2019;Provincia;San Luis;OCT;293.30;9.40
+2019;Provincia;Santa Cruz;OCT;136.00;4.40
+2019;Provincia;Santa Fe;OCT;2289.00;73.60
+2019;Provincia;Santiago del Estero;OCT;231.90;7.50
+2019;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;OCT;238.00;7.70
+2019;Provincia;Tucumán;OCT;1232.60;39.60
+2019;Provincia;Buenos Aires;Empresa;10672.10;343.20
+2019;Provincia;Catamarca;Empresa;7.00;0.20
+2019;Provincia;Chaco;Empresa;110.70;3.60
+2019;Provincia;Chubut;Empresa;165.30;5.30
+2019;Provincia;C.A.B.A.;Empresa;15096.80;485.40
+2019;Provincia;Córdoba;Empresa;4597.10;147.80
+2019;Provincia;Corrientes;Empresa;77.10;2.50
+2019;Provincia;Entre Ríos;Empresa;397.00;12.80
+2019;Provincia;Formosa;Empresa;11.00;0.40
+2019;Provincia;Jujuy;Empresa;33.80;1.10
+2019;Provincia;La Pampa;Empresa;141.70;4.60
+2019;Provincia;La Rioja;Empresa;153.60;4.90
+2019;Provincia;Mendoza;Empresa;551.10;17.70
+2019;Provincia;Misiones;Empresa;31.80;1.00
+2019;Provincia;Neuquén;Empresa;70.80;2.30
+2019;Provincia;Río Negro;Empresa;745.70;24.00
+2019;Provincia;Salta;Empresa;241.10;7.80
+2019;Provincia;San Juan;Empresa;63.30;2.00
+2019;Provincia;San Luis;Empresa;473.60;15.20
+2019;Provincia;Santa Cruz;Empresa;40.90;1.30
+2019;Provincia;Santa Fe;Empresa;2846.60;91.50
+2019;Provincia;Santiago del Estero;Empresa;31.60;1.00
+2019;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;Empresa;46.00;1.50
+2019;Provincia;Tucumán;Empresa;704.20;22.60
+2020;Provincia;Buenos Aires;ESFL;91.30;2.10
+2020;Provincia;Catamarca;ESFL;0.00;0.00
+2020;Provincia;Chaco;ESFL;0.10;0.00
+2020;Provincia;Chubut;ESFL;24.40;0.60
+2020;Provincia;C.A.B.A.;ESFL;1372.20;31.50
+2020;Provincia;Córdoba;ESFL;32.50;0.70
+2020;Provincia;Corrientes;ESFL;0.20;0.00
+2020;Provincia;Entre Ríos;ESFL;0.00;0.00
+2020;Provincia;Formosa;ESFL;0.00;0.00
+2020;Provincia;Jujuy;ESFL;0.00;0.00
+2020;Provincia;La Pampa;ESFL;0.00;0.00
+2020;Provincia;La Rioja;ESFL;0.00;0.00
+2020;Provincia;Mendoza;ESFL;27.00;0.60
+2020;Provincia;Misiones;ESFL;1.70;0.00
+2020;Provincia;Neuquén;ESFL;20.80;0.50
+2020;Provincia;Río Negro;ESFL;18.60;0.40
+2020;Provincia;Salta;ESFL;12.10;0.30
+2020;Provincia;San Juan;ESFL;0.00;0.00
+2020;Provincia;San Luis;ESFL;0.00;0.00
+2020;Provincia;Santa Cruz;ESFL;1.50;0.00
+2020;Provincia;Santa Fe;ESFL;15.30;0.40
+2020;Provincia;Santiago del Estero;ESFL;0.00;0.00
+2020;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;ESFL;0.00;0.00
+2020;Provincia;Tucumán;ESFL;0.00;0.00
+2020;Provincia;Buenos Aires;UPUB;9269.30;212.80
+2020;Provincia;Catamarca;UPUB;150.40;3.50
+2020;Provincia;Chaco;UPUB;368.80;8.50
+2020;Provincia;Chubut;UPUB;233.70;5.40
+2020;Provincia;C.A.B.A.;UPUB;8388.10;192.50
+2020;Provincia;Córdoba;UPUB;2226.90;51.10
+2020;Provincia;Corrientes;UPUB;308.40;7.10
+2020;Provincia;Entre Ríos;UPUB;434.10;10.00
+2020;Provincia;Formosa;UPUB;174.90;4.00
+2020;Provincia;Jujuy;UPUB;726.50;16.70
+2020;Provincia;La Pampa;UPUB;249.10;5.70
+2020;Provincia;La Rioja;UPUB;379.90;8.70
+2020;Provincia;Mendoza;UPUB;778.60;17.90
+2020;Provincia;Misiones;UPUB;556.10;12.80
+2020;Provincia;Neuquén;UPUB;362.30;8.30
+2020;Provincia;Río Negro;UPUB;703.40;16.10
+2020;Provincia;Salta;UPUB;261.90;6.00
+2020;Provincia;San Juan;UPUB;99.10;2.30
+2020;Provincia;San Luis;UPUB;1164.10;26.70
+2020;Provincia;Santa Cruz;UPUB;346.40;8.00
+2020;Provincia;Santa Fe;UPUB;3262.90;74.90
+2020;Provincia;Santiago del Estero;UPUB;352.10;8.10
+2020;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;UPUB;138.80;3.20
+2020;Provincia;Tucumán;UPUB;1027.90;23.60
+2020;Provincia;Buenos Aires;UPRI;369.50;8.50
+2020;Provincia;Catamarca;UPRI;0.00;0.00
+2020;Provincia;Chaco;UPRI;1.30;0.00
+2020;Provincia;Chubut;UPRI;0.70;0.00
+2020;Provincia;C.A.B.A.;UPRI;1026.20;23.60
+2020;Provincia;Córdoba;UPRI;120.10;2.80
+2020;Provincia;Corrientes;UPRI;41.10;0.90
+2020;Provincia;Entre Ríos;UPRI;34.10;0.80
+2020;Provincia;Formosa;UPRI;1.70;0.00
+2020;Provincia;Jujuy;UPRI;0.00;0.00
+2020;Provincia;La Pampa;UPRI;0.00;0.00
+2020;Provincia;La Rioja;UPRI;1.80;0.00
+2020;Provincia;Mendoza;UPRI;97.80;2.20
+2020;Provincia;Misiones;UPRI;39.30;0.90
+2020;Provincia;Neuquén;UPRI;0.00;0.00
+2020;Provincia;Río Negro;UPRI;3.30;0.10
+2020;Provincia;Salta;UPRI;30.30;0.70
+2020;Provincia;San Juan;UPRI;10.90;0.30
+2020;Provincia;San Luis;UPRI;2.70;0.10
+2020;Provincia;Santa Cruz;UPRI;0.00;0.00
+2020;Provincia;Santa Fe;UPRI;70.10;1.60
+2020;Provincia;Santiago del Estero;UPRI;0.00;0.00
+2020;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;UPRI;0.70;0.00
+2020;Provincia;Tucumán;UPRI;33.30;0.80
+2020;Provincia;Buenos Aires;OCT;21173.50;486.00
+2020;Provincia;Catamarca;OCT;249.90;5.70
+2020;Provincia;Chaco;OCT;438.90;10.10
+2020;Provincia;Chubut;OCT;1296.20;29.80
+2020;Provincia;C.A.B.A.;OCT;11789.80;270.60
+2020;Provincia;Córdoba;OCT;3841.50;88.20
+2020;Provincia;Corrientes;OCT;650.60;14.90
+2020;Provincia;Entre Ríos;OCT;615.00;14.10
+2020;Provincia;Formosa;OCT;187.50;4.30
+2020;Provincia;Jujuy;OCT;414.70;9.50
+2020;Provincia;La Pampa;OCT;381.50;8.80
+2020;Provincia;La Rioja;OCT;222.50;5.10
+2020;Provincia;Mendoza;OCT;1703.30;39.10
+2020;Provincia;Misiones;OCT;553.50;12.70
+2020;Provincia;Neuquén;OCT;489.40;11.20
+2020;Provincia;Río Negro;OCT;2333.30;53.60
+2020;Provincia;Salta;OCT;665.30;15.30
+2020;Provincia;San Juan;OCT;697.00;16.00
+2020;Provincia;San Luis;OCT;370.10;8.50
+2020;Provincia;Santa Cruz;OCT;193.00;4.40
+2020;Provincia;Santa Fe;OCT;2751.90;63.20
+2020;Provincia;Santiago del Estero;OCT;319.90;7.30
+2020;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;OCT;271.30;6.20
+2020;Provincia;Tucumán;OCT;1710.90;39.30
+2020;Provincia;Buenos Aires;Empresa;16732.40;384.10
+2020;Provincia;Catamarca;Empresa;14.00;0.30
+2020;Provincia;Chaco;Empresa;209.00;4.80
+2020;Provincia;Chubut;Empresa;188.40;4.30
+2020;Provincia;C.A.B.A.;Empresa;25161.30;577.60
+2020;Provincia;Córdoba;Empresa;6663.10;152.90
+2020;Provincia;Corrientes;Empresa;100.90;2.30
+2020;Provincia;Entre Ríos;Empresa;478.20;11.00
+2020;Provincia;Formosa;Empresa;246.40;5.70
+2020;Provincia;Jujuy;Empresa;42.00;1.00
+2020;Provincia;La Pampa;Empresa;37.60;0.90
+2020;Provincia;La Rioja;Empresa;141.40;3.20
+2020;Provincia;Mendoza;Empresa;875.50;20.10
+2020;Provincia;Misiones;Empresa;70.70;1.60
+2020;Provincia;Neuquén;Empresa;111.80;2.60
+2020;Provincia;Río Negro;Empresa;898.20;20.60
+2020;Provincia;Salta;Empresa;229.50;5.30
+2020;Provincia;San Juan;Empresa;115.80;2.70
+2020;Provincia;San Luis;Empresa;617.90;14.20
+2020;Provincia;Santa Cruz;Empresa;17.60;0.40
+2020;Provincia;Santa Fe;Empresa;4242.00;97.40
+2020;Provincia;Santiago del Estero;Empresa;107.40;2.50
+2020;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;Empresa;88.90;2.00
+2020;Provincia;Tucumán;Empresa;1099.60;25.20
+2021;Provincia;Buenos Aires;ESFL;149.10;2.20
+2021;Provincia;Catamarca;ESFL;0.00;0.00
+2021;Provincia;Chaco;ESFL;10.20;0.20
+2021;Provincia;Chubut;ESFL;43.20;0.60
+2021;Provincia;C.A.B.A.;ESFL;2944.50;43.90
+2021;Provincia;Córdoba;ESFL;72.60;1.10
+2021;Provincia;Corrientes;ESFL;6.10;0.10
+2021;Provincia;Entre Ríos;ESFL;0.80;0.00
+2021;Provincia;Formosa;ESFL;13.10;0.20
+2021;Provincia;Jujuy;ESFL;0.00;0.00
+2021;Provincia;La Pampa;ESFL;0.00;0.00
+2021;Provincia;La Rioja;ESFL;0.00;0.00
+2021;Provincia;Mendoza;ESFL;42.80;0.60
+2021;Provincia;Misiones;ESFL;11.90;0.20
+2021;Provincia;Neuquén;ESFL;88.20;1.30
+2021;Provincia;Río Negro;ESFL;105.70;1.60
+2021;Provincia;Salta;ESFL;39.50;0.60
+2021;Provincia;San Juan;ESFL;0.80;0.00
+2021;Provincia;San Luis;ESFL;0.00;0.00
+2021;Provincia;Santa Cruz;ESFL;2.30;0.00
+2021;Provincia;Santa Fe;ESFL;28.90;0.40
+2021;Provincia;Santiago del Estero;ESFL;35.70;0.50
+2021;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;ESFL;0.00;0.00
+2021;Provincia;Tucumán;ESFL;0.00;0.00
+2021;Provincia;Buenos Aires;UPUB;14414.20;215.10
+2021;Provincia;Catamarca;UPUB;222.20;3.30
+2021;Provincia;Chaco;UPUB;476.10;7.10
+2021;Provincia;Chubut;UPUB;304.50;4.50
+2021;Provincia;C.A.B.A.;UPUB;12119.60;180.90
+2021;Provincia;Córdoba;UPUB;3869.70;57.80
+2021;Provincia;Corrientes;UPUB;564.00;8.40
+2021;Provincia;Entre Ríos;UPUB;684.60;10.20
+2021;Provincia;Formosa;UPUB;244.60;3.70
+2021;Provincia;Jujuy;UPUB;1005.10;15.00
+2021;Provincia;La Pampa;UPUB;423.50;6.30
+2021;Provincia;La Rioja;UPUB;609.20;9.10
+2021;Provincia;Mendoza;UPUB;945.40;14.10
+2021;Provincia;Misiones;UPUB;726.70;10.80
+2021;Provincia;Neuquén;UPUB;351.30;5.20
+2021;Provincia;Río Negro;UPUB;700.50;10.50
+2021;Provincia;Salta;UPUB;354.10;5.30
+2021;Provincia;San Juan;UPUB;1071.60;16.00
+2021;Provincia;San Luis;UPUB;2074.90;31.00
+2021;Provincia;Santa Cruz;UPUB;410.20;6.10
+2021;Provincia;Santa Fe;UPUB;4844.10;72.30
+2021;Provincia;Santiago del Estero;UPUB;366.90;5.50
+2021;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;UPUB;211.00;3.10
+2021;Provincia;Tucumán;UPUB;2040.70;30.50
+2021;Provincia;Buenos Aires;UPRI;304.70;4.50
+2021;Provincia;Catamarca;UPRI;0.00;0.00
+2021;Provincia;Chaco;UPRI;3.50;0.10
+2021;Provincia;Chubut;UPRI;0.00;0.00
+2021;Provincia;C.A.B.A.;UPRI;1808.20;27.00
+2021;Provincia;Córdoba;UPRI;213.30;3.20
+2021;Provincia;Corrientes;UPRI;20.90;0.30
+2021;Provincia;Entre Ríos;UPRI;43.90;0.70
+2021;Provincia;Formosa;UPRI;0.40;0.00
+2021;Provincia;Jujuy;UPRI;7.00;0.10
+2021;Provincia;La Pampa;UPRI;0.00;0.00
+2021;Provincia;La Rioja;UPRI;4.40;0.10
+2021;Provincia;Mendoza;UPRI;124.50;1.90
+2021;Provincia;Misiones;UPRI;41.60;0.60
+2021;Provincia;Neuquén;UPRI;0.40;0.00
+2021;Provincia;Río Negro;UPRI;6.30;0.10
+2021;Provincia;Salta;UPRI;67.50;1.00
+2021;Provincia;San Juan;UPRI;22.70;0.30
+2021;Provincia;San Luis;UPRI;2.00;0.00
+2021;Provincia;Santa Cruz;UPRI;0.00;0.00
+2021;Provincia;Santa Fe;UPRI;175.20;2.60
+2021;Provincia;Santiago del Estero;UPRI;15.50;0.20
+2021;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;UPRI;2.60;0.00
+2021;Provincia;Tucumán;UPRI;38.10;0.60
+2021;Provincia;Buenos Aires;OCT;39141.50;584.20
+2021;Provincia;Catamarca;OCT;414.10;6.20
+2021;Provincia;Chaco;OCT;667.00;10.00
+2021;Provincia;Chubut;OCT;2208.00;33.00
+2021;Provincia;C.A.B.A.;OCT;18734.20;279.60
+2021;Provincia;Córdoba;OCT;6378.80;95.20
+2021;Provincia;Corrientes;OCT;967.30;14.40
+2021;Provincia;Entre Ríos;OCT;1029.60;15.40
+2021;Provincia;Formosa;OCT;277.20;4.10
+2021;Provincia;Jujuy;OCT;681.40;10.20
+2021;Provincia;La Pampa;OCT;682.60;10.20
+2021;Provincia;La Rioja;OCT;345.40;5.20
+2021;Provincia;Mendoza;OCT;2625.10;39.20
+2021;Provincia;Misiones;OCT;915.00;13.70
+2021;Provincia;Neuquén;OCT;955.30;14.30
+2021;Provincia;Río Negro;OCT;4065.30;60.70
+2021;Provincia;Salta;OCT;1097.70;16.40
+2021;Provincia;San Juan;OCT;1077.60;16.10
+2021;Provincia;San Luis;OCT;587.90;8.80
+2021;Provincia;Santa Cruz;OCT;357.40;5.30
+2021;Provincia;Santa Fe;OCT;4489.00;67.00
+2021;Provincia;Santiago del Estero;OCT;521.00;7.80
+2021;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;OCT;384.40;5.70
+2021;Provincia;Tucumán;OCT;2529.00;37.70
+2021;Provincia;Buenos Aires;Empresa;28036.70;418.40
+2021;Provincia;Catamarca;Empresa;19.90;0.30
+2021;Provincia;Chaco;Empresa;290.70;4.30
+2021;Provincia;Chubut;Empresa;301.50;4.50
+2021;Provincia;C.A.B.A.;Empresa;40068.90;598.00
+2021;Provincia;Córdoba;Empresa;9566.60;142.80
+2021;Provincia;Corrientes;Empresa;152.50;2.30
+2021;Provincia;Entre Ríos;Empresa;773.10;11.50
+2021;Provincia;Formosa;Empresa;277.50;4.10
+2021;Provincia;Jujuy;Empresa;74.60;1.10
+2021;Provincia;La Pampa;Empresa;46.40;0.70
+2021;Provincia;La Rioja;Empresa;238.90;3.60
+2021;Provincia;Mendoza;Empresa;1632.00;24.40
+2021;Provincia;Misiones;Empresa;142.60;2.10
+2021;Provincia;Neuquén;Empresa;175.00;2.60
+2021;Provincia;Río Negro;Empresa;1797.40;26.80
+2021;Provincia;Salta;Empresa;350.40;5.20
+2021;Provincia;San Juan;Empresa;210.00;3.10
+2021;Provincia;San Luis;Empresa;699.30;10.40
+2021;Provincia;Santa Cruz;Empresa;22.60;0.30
+2021;Provincia;Santa Fe;Empresa;8528.70;127.30
+2021;Provincia;Santiago del Estero;Empresa;84.70;1.30
+2021;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;Empresa;164.70;2.50
+2021;Provincia;Tucumán;Empresa;1684.60;25.10
+2022;Provincia;Buenos Aires;ESFL;1105.70;9.70
+2022;Provincia;Catamarca;ESFL;0.00;0.00
+2022;Provincia;Chaco;ESFL;18.00;0.20
+2022;Provincia;Chubut;ESFL;67.80;0.60
+2022;Provincia;C.A.B.A.;ESFL;4552.60;40.00
+2022;Provincia;Córdoba;ESFL;136.00;1.20
+2022;Provincia;Corrientes;ESFL;0.00;0.00
+2022;Provincia;Entre Ríos;ESFL;0.00;0.00
+2022;Provincia;Formosa;ESFL;25.20;0.20
+2022;Provincia;Jujuy;ESFL;0.00;0.00
+2022;Provincia;La Pampa;ESFL;0.00;0.00
+2022;Provincia;La Rioja;ESFL;0.00;0.00
+2022;Provincia;Mendoza;ESFL;53.40;0.50
+2022;Provincia;Misiones;ESFL;72.50;0.60
+2022;Provincia;Neuquén;ESFL;59.00;0.50
+2022;Provincia;Río Negro;ESFL;43.20;0.40
+2022;Provincia;Salta;ESFL;263.10;2.30
+2022;Provincia;San Juan;ESFL;0.90;0.00
+2022;Provincia;San Luis;ESFL;0.00;0.00
+2022;Provincia;Santa Cruz;ESFL;35.00;0.30
+2022;Provincia;Santa Fe;ESFL;97.90;0.90
+2022;Provincia;Santiago del Estero;ESFL;69.50;0.60
+2022;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;ESFL;18.00;0.20
+2022;Provincia;Tucumán;ESFL;0.00;0.00
+2022;Provincia;Buenos Aires;UPUB;29682.40;260.80
+2022;Provincia;Catamarca;UPUB;931.70;8.20
+2022;Provincia;Chaco;UPUB;1161.30;10.20
+2022;Provincia;Chubut;UPUB;1057.00;9.30
+2022;Provincia;C.A.B.A.;UPUB;16902.10;148.50
+2022;Provincia;Córdoba;UPUB;6554.80;57.60
+2022;Provincia;Corrientes;UPUB;1135.90;10.00
+2022;Provincia;Entre Ríos;UPUB;1732.10;15.20
+2022;Provincia;Formosa;UPUB;459.80;4.00
+2022;Provincia;Jujuy;UPUB;1911.40;16.80
+2022;Provincia;La Pampa;UPUB;830.50;7.30
+2022;Provincia;La Rioja;UPUB;749.40;6.60
+2022;Provincia;Mendoza;UPUB;1607.20;14.10
+2022;Provincia;Misiones;UPUB;1329.20;11.70
+2022;Provincia;Neuquén;UPUB;793.90;7.00
+2022;Provincia;Río Negro;UPUB;1208.40;10.60
+2022;Provincia;Salta;UPUB;783.50;6.90
+2022;Provincia;San Juan;UPUB;1401.40;12.30
+2022;Provincia;San Luis;UPUB;3005.40;26.40
+2022;Provincia;Santa Cruz;UPUB;860.50;7.60
+2022;Provincia;Santa Fe;UPUB;9351.50;82.20
+2022;Provincia;Santiago del Estero;UPUB;521.90;4.60
+2022;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;UPUB;483.80;4.30
+2022;Provincia;Tucumán;UPUB;3377.80;29.70
+2022;Provincia;Buenos Aires;UPRI;1149.80;10.10
+2022;Provincia;Catamarca;UPRI;0.00;0.00
+2022;Provincia;Chaco;UPRI;9.50;0.10
+2022;Provincia;Chubut;UPRI;0.00;0.00
+2022;Provincia;C.A.B.A.;UPRI;3149.40;27.70
+2022;Provincia;Córdoba;UPRI;385.30;3.40
+2022;Provincia;Corrientes;UPRI;44.00;0.40
+2022;Provincia;Entre Ríos;UPRI;165.00;1.40
+2022;Provincia;Formosa;UPRI;2.80;0.00
+2022;Provincia;Jujuy;UPRI;5.00;0.00
+2022;Provincia;La Pampa;UPRI;0.00;0.00
+2022;Provincia;La Rioja;UPRI;10.80;0.10
+2022;Provincia;Mendoza;UPRI;192.50;1.70
+2022;Provincia;Misiones;UPRI;25.70;0.20
+2022;Provincia;Neuquén;UPRI;0.10;0.00
+2022;Provincia;Río Negro;UPRI;6.00;0.10
+2022;Provincia;Salta;UPRI;116.20;1.00
+2022;Provincia;San Juan;UPRI;40.40;0.40
+2022;Provincia;San Luis;UPRI;26.80;0.20
+2022;Provincia;Santa Cruz;UPRI;0.00;0.00
+2022;Provincia;Santa Fe;UPRI;178.20;1.60
+2022;Provincia;Santiago del Estero;UPRI;41.70;0.40
+2022;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;UPRI;8.00;0.10
+2022;Provincia;Tucumán;UPRI;73.50;0.60
+2022;Provincia;Buenos Aires;OCT;75400.30;662.40
+2022;Provincia;Catamarca;OCT;683.70;6.00
+2022;Provincia;Chaco;OCT;1205.00;10.60
+2022;Provincia;Chubut;OCT;3273.50;28.80
+2022;Provincia;C.A.B.A.;OCT;37719.80;331.40
+2022;Provincia;Córdoba;OCT;11737.70;103.10
+2022;Provincia;Corrientes;OCT;1694.40;14.90
+2022;Provincia;Entre Ríos;OCT;1818.90;16.00
+2022;Provincia;Formosa;OCT;525.80;4.60
+2022;Provincia;Jujuy;OCT;1178.80;10.40
+2022;Provincia;La Pampa;OCT;877.20;7.70
+2022;Provincia;La Rioja;OCT;535.90;4.70
+2022;Provincia;Mendoza;OCT;4852.20;42.60
+2022;Provincia;Misiones;OCT;1689.60;14.80
+2022;Provincia;Neuquén;OCT;3508.30;30.80
+2022;Provincia;Río Negro;OCT;6943.30;61.00
+2022;Provincia;Salta;OCT;1866.50;16.40
+2022;Provincia;San Juan;OCT;1993.00;17.50
+2022;Provincia;San Luis;OCT;1036.30;9.10
+2022;Provincia;Santa Cruz;OCT;593.90;5.20
+2022;Provincia;Santa Fe;OCT;8404.20;73.80
+2022;Provincia;Santiago del Estero;OCT;798.90;7.00
+2022;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;OCT;1144.70;10.10
+2022;Provincia;Tucumán;OCT;4256.90;37.40
+2022;Provincia;Buenos Aires;Empresa;52075.40;457.50
+2022;Provincia;Catamarca;Empresa;59.10;0.50
+2022;Provincia;Chaco;Empresa;471.50;4.10
+2022;Provincia;Chubut;Empresa;745.80;6.60
+2022;Provincia;C.A.B.A.;Empresa;77462.40;680.60
+2022;Provincia;Córdoba;Empresa;17286.20;151.90
+2022;Provincia;Corrientes;Empresa;209.80;1.80
+2022;Provincia;Entre Ríos;Empresa;1256.60;11.00
+2022;Provincia;Formosa;Empresa;446.70;3.90
+2022;Provincia;Jujuy;Empresa;321.00;2.80
+2022;Provincia;La Pampa;Empresa;146.20;1.30
+2022;Provincia;La Rioja;Empresa;432.40;3.80
+2022;Provincia;Mendoza;Empresa;2972.40;26.10
+2022;Provincia;Misiones;Empresa;234.30;2.10
+2022;Provincia;Neuquén;Empresa;676.90;5.90
+2022;Provincia;Río Negro;Empresa;4127.50;36.30
+2022;Provincia;Salta;Empresa;370.90;3.30
+2022;Provincia;San Juan;Empresa;651.80;5.70
+2022;Provincia;San Luis;Empresa;1158.60;10.20
+2022;Provincia;Santa Cruz;Empresa;58.80;0.50
+2022;Provincia;Santa Fe;Empresa;15956.70;140.20
+2022;Provincia;Santiago del Estero;Empresa;182.00;1.60
+2022;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;Empresa;394.40;3.50
+2022;Provincia;Tucumán;Empresa;2668.80;23.40
+2023;Provincia;Buenos Aires;ESFL;3158.30;11.80
+2023;Provincia;Catamarca;ESFL;0.00;0.00
+2023;Provincia;Chaco;ESFL;42.60;0.20
+2023;Provincia;Chubut;ESFL;257.30;1.00
+2023;Provincia;C.A.B.A.;ESFL;12005.60;44.80
+2023;Provincia;Córdoba;ESFL;505.00;1.90
+2023;Provincia;Corrientes;ESFL;0.30;0.00
+2023;Provincia;Entre Ríos;ESFL;15.80;0.10
+2023;Provincia;Formosa;ESFL;49.70;0.20
+2023;Provincia;Jujuy;ESFL;0.00;0.00
+2023;Provincia;La Pampa;ESFL;0.00;0.00
+2023;Provincia;La Rioja;ESFL;0.00;0.00
+2023;Provincia;Mendoza;ESFL;111.50;0.40
+2023;Provincia;Misiones;ESFL;100.00;0.40
+2023;Provincia;Neuquén;ESFL;241.00;0.90
+2023;Provincia;Río Negro;ESFL;108.90;0.40
+2023;Provincia;Salta;ESFL;609.20;2.30
+2023;Provincia;San Juan;ESFL;1.40;0.00
+2023;Provincia;San Luis;ESFL;0.00;0.00
+2023;Provincia;Santa Cruz;ESFL;77.10;0.30
+2023;Provincia;Santa Fe;ESFL;335.00;1.30
+2023;Provincia;Santiago del Estero;ESFL;135.80;0.50
+2023;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;ESFL;0.00;0.00
+2023;Provincia;Tucumán;ESFL;0.00;0.00
+2023;Provincia;Buenos Aires;UPUB;72431.80;270.40
+2023;Provincia;Catamarca;UPUB;3178.70;11.90
+2023;Provincia;Chaco;UPUB;2914.80;10.90
+2023;Provincia;Chubut;UPUB;2541.00;9.50
+2023;Provincia;C.A.B.A.;UPUB;31934.20;119.20
+2023;Provincia;Córdoba;UPUB;15126.20;56.50
+2023;Provincia;Corrientes;UPUB;3603.00;13.40
+2023;Provincia;Entre Ríos;UPUB;2977.70;11.10
+2023;Provincia;Formosa;UPUB;586.00;2.20
+2023;Provincia;Jujuy;UPUB;3671.30;13.70
+2023;Provincia;La Pampa;UPUB;2224.10;8.30
+2023;Provincia;La Rioja;UPUB;3139.10;11.70
+2023;Provincia;Mendoza;UPUB;5026.40;18.80
+2023;Provincia;Misiones;UPUB;3518.50;13.10
+2023;Provincia;Neuquén;UPUB;1839.10;6.90
+2023;Provincia;Río Negro;UPUB;3229.30;12.10
+2023;Provincia;Salta;UPUB;1590.90;5.90
+2023;Provincia;San Juan;UPUB;4251.90;15.90
+2023;Provincia;San Luis;UPUB;6189.70;23.10
+2023;Provincia;Santa Cruz;UPUB;2540.80;9.50
+2023;Provincia;Santa Fe;UPUB;28080.80;104.80
+2023;Provincia;Santiago del Estero;UPUB;739.20;2.80
+2023;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;UPUB;1521.30;5.70
+2023;Provincia;Tucumán;UPUB;8329.90;31.10
+2023;Provincia;Buenos Aires;UPRI;3206.20;12.00
+2023;Provincia;Catamarca;UPRI;0.00;0.00
+2023;Provincia;Chaco;UPRI;67.90;0.30
+2023;Provincia;Chubut;UPRI;0.00;0.00
+2023;Provincia;C.A.B.A.;UPRI;8099.70;30.20
+2023;Provincia;Córdoba;UPRI;920.30;3.40
+2023;Provincia;Corrientes;UPRI;72.00;0.30
+2023;Provincia;Entre Ríos;UPRI;320.70;1.20
+2023;Provincia;Formosa;UPRI;14.90;0.10
+2023;Provincia;Jujuy;UPRI;7.10;0.00
+2023;Provincia;La Pampa;UPRI;0.00;0.00
+2023;Provincia;La Rioja;UPRI;20.20;0.10
+2023;Provincia;Mendoza;UPRI;403.70;1.50
+2023;Provincia;Misiones;UPRI;651.80;2.40
+2023;Provincia;Neuquén;UPRI;0.00;0.00
+2023;Provincia;Río Negro;UPRI;17.50;0.10
+2023;Provincia;Salta;UPRI;258.60;1.00
+2023;Provincia;San Juan;UPRI;58.30;0.20
+2023;Provincia;San Luis;UPRI;16.00;0.10
+2023;Provincia;Santa Cruz;UPRI;0.00;0.00
+2023;Provincia;Santa Fe;UPRI;457.40;1.70
+2023;Provincia;Santiago del Estero;UPRI;53.70;0.20
+2023;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;UPRI;59.00;0.20
+2023;Provincia;Tucumán;UPRI;194.50;0.70
+2023;Provincia;Buenos Aires;OCT;177138.30;661.20
+2023;Provincia;Catamarca;OCT;1819.80;6.80
+2023;Provincia;Chaco;OCT;3613.30;13.50
+2023;Provincia;Chubut;OCT;9870.50;36.80
+2023;Provincia;C.A.B.A.;OCT;89941.30;335.70
+2023;Provincia;Córdoba;OCT;31812.50;118.70
+2023;Provincia;Corrientes;OCT;5040.40;18.80
+2023;Provincia;Entre Ríos;OCT;5161.90;19.30
+2023;Provincia;Formosa;OCT;1221.50;4.60
+2023;Provincia;Jujuy;OCT;3291.50;12.30
+2023;Provincia;La Pampa;OCT;2754.70;10.30
+2023;Provincia;La Rioja;OCT;1606.50;6.00
+2023;Provincia;Mendoza;OCT;12937.60;48.30
+2023;Provincia;Misiones;OCT;4361.90;16.30
+2023;Provincia;Neuquén;OCT;3911.00;14.60
+2023;Provincia;Río Negro;OCT;15676.50;58.50
+2023;Provincia;Salta;OCT;5204.70;19.40
+2023;Provincia;San Juan;OCT;5142.80;19.20
+2023;Provincia;San Luis;OCT;3032.10;11.30
+2023;Provincia;Santa Cruz;OCT;1579.40;5.90
+2023;Provincia;Santa Fe;OCT;21980.90;82.00
+2023;Provincia;Santiago del Estero;OCT;2211.20;8.30
+2023;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;OCT;2629.80;9.80
+2023;Provincia;Tucumán;OCT;10759.40;40.20
+2023;Provincia;Buenos Aires;Empresa;146365.40;546.30
+2023;Provincia;Catamarca;Empresa;879.90;3.30
+2023;Provincia;Chaco;Empresa;1379.80;5.20
+2023;Provincia;Chubut;Empresa;1908.30;7.10
+2023;Provincia;C.A.B.A.;Empresa;211039.20;787.80
+2023;Provincia;Córdoba;Empresa;41979.80;156.70
+2023;Provincia;Corrientes;Empresa;626.10;2.30
+2023;Provincia;Entre Ríos;Empresa;4206.50;15.70
+2023;Provincia;Formosa;Empresa;1058.80;4.00
+2023;Provincia;Jujuy;Empresa;546.10;2.00
+2023;Provincia;La Pampa;Empresa;437.70;1.60
+2023;Provincia;La Rioja;Empresa;1232.00;4.60
+2023;Provincia;Mendoza;Empresa;8972.20;33.50
+2023;Provincia;Misiones;Empresa;753.70;2.80
+2023;Provincia;Neuquén;Empresa;1883.10;7.00
+2023;Provincia;Río Negro;Empresa;6711.80;25.10
+2023;Provincia;Salta;Empresa;532.40;2.00
+2023;Provincia;San Juan;Empresa;1850.80;6.90
+2023;Provincia;San Luis;Empresa;4268.10;15.90
+2023;Provincia;Santa Cruz;Empresa;7.00;0.00
+2023;Provincia;Santa Fe;Empresa;36911.10;137.80
+2023;Provincia;Santiago del Estero;Empresa;540.50;2.00
+2023;Provincia;Tierra del Fuego. Antártida e Islas del Atlántico Sur;Empresa;645.40;2.40
+2023;Provincia;Tucumán;Empresa;9287.30;34.70
+2019;Región;Centro;ESFL;43.10;1.40
+2019;Región;Centro;Empresa;7840.70;252.10
+2019;Región;Centro;OCT;6130.40;197.10
+2019;Región;Centro;UPRI;152.30;5.00
+2019;Región;Centro;UPUB;4384.50;140.90
+2019;Región;Cuyo;ESFL;20.80;0.70
+2019;Región;Cuyo;Empresa;1088.00;34.90
+2019;Región;Cuyo;OCT;2542.50;81.80
+2019;Región;Cuyo;UPRI;77.70;2.50
+2019;Región;Cuyo;UPUB;1526.10;49.00
+2019;Región;Metropolitana;ESFL;1024.80;33.00
+2019;Región;Metropolitana;Empresa;25768.90;828.60
+2019;Región;Metropolitana;OCT;21374.80;687.40
+2019;Región;Metropolitana;UPRI;1050.80;33.80
+2019;Región;Metropolitana;UPUB;13307.60;427.90
+2019;Región;NEA;ESFL;2.40;0.00
+2019;Región;NEA;Empresa;230.60;7.50
+2019;Región;NEA;OCT;1436.20;46.20
+2019;Región;NEA;UPRI;41.10;1.20
+2019;Región;NEA;UPUB;1023.50;32.90
+2019;Región;NOA;ESFL;14.90;0.50
+2019;Región;NOA;Empresa;1171.30;37.60
+2019;Región;NOA;OCT;2777.80;89.40
+2019;Región;NOA;UPRI;34.10;1.00
+2019;Región;NOA;UPUB;2370.40;76.20
+2019;Región;Patagonia;ESFL;63.60;2.10
+2019;Región;Patagonia;Empresa;1210.40;39.00
+2019;Región;Patagonia;OCT;4674.00;150.30
+2019;Región;Patagonia;UPRI;3.20;0.10
+2019;Región;Patagonia;UPUB;1691.40;54.50
+2020;Región;Centro;ESFL;47.80;1.10
+2020;Región;Centro;Empresa;11383.30;261.30
+2020;Región;Centro;OCT;7208.40;165.50
+2020;Región;Centro;UPRI;224.30;5.20
+2020;Región;Centro;UPUB;5923.90;136.00
+2020;Región;Cuyo;ESFL;27.00;0.60
+2020;Región;Cuyo;Empresa;1609.20;37.00
+2020;Región;Cuyo;OCT;2770.40;63.60
+2020;Región;Cuyo;UPRI;111.40;2.60
+2020;Región;Cuyo;UPUB;2041.80;46.90
+2020;Región;Metropolitana;ESFL;1463.50;33.60
+2020;Región;Metropolitana;Empresa;41893.70;961.70
+2020;Región;Metropolitana;OCT;32963.30;756.60
+2020;Región;Metropolitana;UPRI;1395.70;32.10
+2020;Región;Metropolitana;UPUB;17657.40;405.30
+2020;Región;NEA;ESFL;2.00;0.00
+2020;Región;NEA;Empresa;627.00;14.40
+2020;Región;NEA;OCT;1830.50;42.00
+2020;Región;NEA;UPRI;83.40;1.80
+2020;Región;NEA;UPUB;1408.20;32.40
+2020;Región;NOA;ESFL;12.10;0.30
+2020;Región;NOA;Empresa;1633.90;37.50
+2020;Región;NOA;OCT;3583.20;82.20
+2020;Región;NOA;UPRI;65.40;1.50
+2020;Región;NOA;UPUB;2898.70;66.60
+2020;Región;Patagonia;ESFL;65.30;1.50
+2020;Región;Patagonia;Empresa;1342.50;30.80
+2020;Región;Patagonia;OCT;4964.70;114.00
+2020;Región;Patagonia;UPRI;4.70;0.10
+2020;Región;Patagonia;UPUB;2033.70;46.70
+2021;Región;Centro;ESFL;102.30;1.50
+2021;Región;Centro;Empresa;18868.40;281.60
+2021;Región;Centro;OCT;11897.40;177.60
+2021;Región;Centro;UPRI;432.40;6.50
+2021;Región;Centro;UPUB;9398.40;140.30
+2021;Región;Cuyo;ESFL;43.60;0.60
+2021;Región;Cuyo;Empresa;2541.30;37.90
+2021;Región;Cuyo;OCT;4290.60;64.10
+2021;Región;Cuyo;UPRI;149.20;2.20
+2021;Región;Cuyo;UPUB;4091.90;61.10
+2021;Región;Metropolitana;ESFL;3093.60;46.10
+2021;Región;Metropolitana;Empresa;68105.60;1016.40
+2021;Región;Metropolitana;OCT;57875.70;863.80
+2021;Región;Metropolitana;UPRI;2112.90;31.50
+2021;Región;Metropolitana;UPUB;26533.80;396.00
+2021;Región;NEA;ESFL;41.30;0.70
+2021;Región;NEA;Empresa;863.30;12.80
+2021;Región;NEA;OCT;2826.50;42.20
+2021;Región;NEA;UPRI;66.40;1.00
+2021;Región;NEA;UPUB;2011.40;30.00
+2021;Región;NOA;ESFL;75.20;1.10
+2021;Región;NOA;Empresa;2453.10;36.60
+2021;Región;NOA;OCT;5588.60;83.50
+2021;Región;NOA;UPRI;132.50;2.00
+2021;Región;NOA;UPUB;4598.20;68.70
+2021;Región;Patagonia;ESFL;239.40;3.50
+2021;Región;Patagonia;Empresa;2507.60;37.40
+2021;Región;Patagonia;OCT;8653.00;129.20
+2021;Región;Patagonia;UPRI;9.30;0.10
+2021;Región;Patagonia;UPUB;2401.00;35.70
+2022;Región;Centro;ESFL;233.90;2.10
+2022;Región;Centro;Empresa;34499.50;303.10
+2022;Región;Centro;OCT;21960.80;192.90
+2022;Región;Centro;UPRI;728.50;6.40
+2022;Región;Centro;UPUB;17638.40;155.00
+2022;Región;Cuyo;ESFL;54.30;0.50
+2022;Región;Cuyo;Empresa;4782.80;42.00
+2022;Región;Cuyo;OCT;7881.50;69.20
+2022;Región;Cuyo;UPRI;259.70;2.30
+2022;Región;Cuyo;UPUB;6014.00;52.80
+2022;Región;Metropolitana;ESFL;5658.30;49.70
+2022;Región;Metropolitana;Empresa;129537.80;1138.10
+2022;Región;Metropolitana;OCT;113120.10;993.80
+2022;Región;Metropolitana;UPRI;4299.20;37.80
+2022;Región;Metropolitana;UPUB;46584.50;409.30
+2022;Región;NEA;ESFL;115.70;1.00
+2022;Región;NEA;Empresa;1362.30;11.90
+2022;Región;NEA;OCT;5114.80;44.90
+2022;Región;NEA;UPRI;82.00;0.70
+2022;Región;NEA;UPUB;4086.20;35.90
+2022;Región;NOA;ESFL;332.60;2.90
+2022;Región;NOA;Empresa;4034.20;35.40
+2022;Región;NOA;OCT;9320.70;81.90
+2022;Región;NOA;UPRI;247.20;2.10
+2022;Región;NOA;UPUB;8275.70;72.80
+2022;Región;Patagonia;ESFL;223.00;2.00
+2022;Región;Patagonia;Empresa;6149.60;54.10
+2022;Región;Patagonia;OCT;16340.90;143.60
+2022;Región;Patagonia;UPRI;14.10;0.20
+2022;Región;Patagonia;UPUB;5234.10;46.10
+2023;Región;Centro;ESFL;855.80;3.30
+2023;Región;Centro;Empresa;83097.40;310.20
+2023;Región;Centro;OCT;58955.30;220.00
+2023;Región;Centro;UPRI;1698.40;6.30
+2023;Región;Centro;UPUB;46184.70;172.40
+2023;Región;Cuyo;ESFL;112.90;0.40
+2023;Región;Cuyo;Empresa;15091.10;56.30
+2023;Región;Cuyo;OCT;21112.50;78.80
+2023;Región;Cuyo;UPRI;478.00;1.80
+2023;Región;Cuyo;UPUB;15468.00;57.80
+2023;Región;Metropolitana;ESFL;15163.90;56.60
+2023;Región;Metropolitana;Empresa;357404.60;1334.10
+2023;Región;Metropolitana;OCT;267079.60;996.90
+2023;Región;Metropolitana;UPRI;11305.90;42.20
+2023;Región;Metropolitana;UPUB;104366.00;389.60
+2023;Región;NEA;ESFL;192.60;0.80
+2023;Región;NEA;Empresa;3818.40;14.30
+2023;Región;NEA;OCT;14237.10;53.20
+2023;Región;NEA;UPRI;806.60;3.10
+2023;Región;NEA;UPUB;10622.30;39.60
+2023;Región;NOA;ESFL;745.00;2.80
+2023;Región;NOA;Empresa;13018.20;48.60
+2023;Región;NOA;OCT;24893.10;93.00
+2023;Región;NOA;UPRI;534.10;2.00
+2023;Región;NOA;UPUB;20649.10;77.10
+2023;Región;Patagonia;ESFL;684.30;2.60
+2023;Región;Patagonia;Empresa;11593.30;43.20
+2023;Región;Patagonia;OCT;36421.90;135.90
+2023;Región;Patagonia;UPRI;76.50;0.30
+2023;Región;Patagonia;UPUB;13895.60;52.00
+2019;País;Total País;ESFL;1169.60;37.70
+2019;País;Total País;Empresa;37309.90;1199.70
+2019;País;Total País;OCT;38935.70;1252.20
+2019;País;Total País;UPRI;1359.20;43.60
+2019;País;Total País;UPUB;24303.50;781.40
+2020;País;Total País;ESFL;1617.70;37.10
+2020;País;Total País;Empresa;58489.60;1342.70
+2020;País;Total País;OCT;53320.50;1223.90
+2020;País;Total País;UPRI;1884.90;43.30
+2020;País;Total País;UPUB;31963.70;733.90
+2021;País;Total País;ESFL;3595.40;53.50
+2021;País;Total País;Empresa;95339.30;1422.70
+2021;País;Total País;OCT;91131.80;1360.40
+2021;País;Total País;UPRI;2902.70;43.30
+2021;País;Total País;UPUB;49034.70;731.80
+2022;País;Total País;ESFL;6617.80;58.20
+2022;País;Total País;Empresa;180366.20;1584.60
+2022;País;Total País;OCT;173738.80;1526.30
+2022;País;Total País;UPRI;5630.70;49.50
+2022;País;Total País;UPUB;87832.90;771.90
+2023;País;Total País;ESFL;17754.50;66.50
+2023;País;Total País;Empresa;484023.00;1806.70
+2023;País;Total País;OCT;422699.50;1577.80
+2023;País;Total País;UPRI;14899.50;55.70
+2023;País;Total País;UPUB;211185.70;788.50

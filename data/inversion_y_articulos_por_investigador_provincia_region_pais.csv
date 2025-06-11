@@ -1,0 +1,156 @@
+anio;nivel_agregacion;unidad_territorial;monto_inversion;cant_investigadores;cant_articulos;inversion_investigador;articulos_investigador
+2019;País;Total País;103077.9;37143;29098;2.8;0.78
+2019;Provincia;Buenos Aires;31198.7;10403;9472;3.0;0.91
+2019;Provincia;C.A.B.A.;31328.2;7483;12357;4.2;1.65
+2019;Provincia;Catamarca;338.9;440;182;0.8;0.41
+2019;Provincia;Chaco;697.6;403;228;1.7;0.57
+2019;Provincia;Chubut;1214.1;528;488;2.3;0.92
+2019;Provincia;Corrientes;804.9;564;509;1.4;0.90
+2019;Provincia;Córdoba;9470.6;4509;3424;2.1;0.76
+2019;Provincia;Entre Ríos;1411.0;592;474;2.4;0.80
+2019;Provincia;Formosa;317.2;86;33;3.7;0.38
+2019;Provincia;Jujuy;927.3;418;269;2.2;0.64
+2019;Provincia;La Pampa;677.8;375;335;1.8;0.89
+2019;Provincia;La Rioja;657.5;263;129;2.5;0.49
+2019;Provincia;Mendoza;2826.9;1315;1110;2.1;0.84
+2019;Provincia;Misiones;914.1;641;374;1.4;0.58
+2019;Provincia;Neuquén;562.5;423;313;1.3;0.74
+2019;Provincia;Río Negro;4334.0;1012;928;4.3;0.92
+2019;Provincia;Salta;1083.4;592;402;1.8;0.68
+2019;Provincia;San Juan;727.7;690;397;1.1;0.58
+2019;Provincia;San Luis;1700.5;949;629;1.8;0.66
+2019;Provincia;Santa Cruz;468.6;240;140;2.0;0.58
+2019;Provincia;Santa Fe;7669.4;3237;2649;2.4;0.82
+2019;Provincia;Santiago del Estero;493.6;315;193;1.6;0.61
+2019;Provincia;Tierra del Fuego, Antártida e Islas del Atlántico Sur;385.6;139;168;2.8;1.21
+2019;Provincia;Tucumán;2867.8;1526;979;1.9;0.64
+2019;Región;Centro;18551.0;8338;6421;2.2;0.77
+2019;Región;Cuyo;5255.1;2954;2049;1.8;0.69
+2019;Región;Metropolitana;62526.9;17886;19141;3.5;1.07
+2019;Región;NEA;2733.8;1694;1089;1.6;0.64
+2019;Región;NOA;6368.5;3554;2024;1.8;0.57
+2019;Región;Patagonia;7642.6;2717;2244;2.8;0.83
+2020;País;Total País;147276.4;36787;31681;4.0;0.86
+2020;Provincia;Buenos Aires;47636.0;10266;10554;4.6;1.03
+2020;Provincia;C.A.B.A.;47737.6;7426;13287;6.4;1.79
+2020;Provincia;Catamarca;414.3;386;164;1.1;0.42
+2020;Provincia;Chaco;1018.1;418;250;2.4;0.60
+2020;Provincia;Chubut;1743.4;522;536;3.3;1.03
+2020;Provincia;Corrientes;1101.2;540;603;2.0;1.12
+2020;Provincia;Córdoba;12884.1;4508;3683;2.9;0.82
+2020;Provincia;Entre Ríos;1561.4;616;507;2.5;0.82
+2020;Provincia;Formosa;610.5;94;43;6.5;0.46
+2020;Provincia;Jujuy;1183.2;406;300;2.9;0.74
+2020;Provincia;La Pampa;668.2;381;376;1.8;0.99
+2020;Provincia;La Rioja;745.6;280;118;2.7;0.42
+2020;Provincia;Mendoza;3482.2;1353;1186;2.6;0.88
+2020;Provincia;Misiones;1221.3;639;450;1.9;0.70
+2020;Provincia;Neuquén;984.3;433;345;2.3;0.80
+2020;Provincia;Río Negro;3956.8;1016;1063;3.9;1.05
+2020;Provincia;Salta;1199.1;592;448;2.0;0.76
+2020;Provincia;San Juan;922.8;669;470;1.4;0.70
+2020;Provincia;San Luis;2154.8;950;580;2.3;0.61
+2020;Provincia;Santa Cruz;558.5;242;167;2.3;0.69
+2020;Provincia;Santa Fe;10342.2;3106;2870;3.3;0.92
+2020;Provincia;Santiago del Estero;779.4;305;222;2.6;0.73
+2020;Provincia;Tierra del Fuego, Antártida e Islas del Atlántico Sur;499.7;153;262;3.3;1.71
+2020;Provincia;Tucumán;3871.7;1486;1068;2.6;0.72
+2020;Región;Centro;24787.7;8230;6905;3.0;0.84
+2020;Región;Cuyo;6559.8;2972;2160;2.2;0.73
+2020;Región;Metropolitana;95373.6;17692;20866;5.4;1.18
+2020;Región;NEA;3951.1;1691;1279;2.3;0.76
+2020;Región;NOA;8193.3;3455;2174;2.4;0.63
+2020;Región;Patagonia;8410.9;2747;2587;3.1;0.94
+2021;País;Total País;242003.9;36641;29934;6.6;0.82
+2021;Provincia;Buenos Aires;82046.2;10318;9774;8.0;0.95
+2021;Provincia;C.A.B.A.;75675.4;7465;13275;10.1;1.78
+2021;Provincia;Catamarca;656.2;347;171;1.9;0.49
+2021;Provincia;Chaco;1447.5;414;267;3.5;0.64
+2021;Provincia;Chubut;2857.2;525;509;5.4;0.97
+2021;Provincia;Corrientes;1710.8;550;639;3.1;1.16
+2021;Provincia;Córdoba;20101.0;4487;3473;4.5;0.77
+2021;Provincia;Entre Ríos;2532.0;603;515;4.2;0.85
+2021;Provincia;Formosa;812.8;84;74;9.7;0.88
+2021;Provincia;Jujuy;1768.1;412;339;4.3;0.82
+2021;Provincia;La Pampa;1152.5;393;371;2.9;0.94
+2021;Provincia;La Rioja;1197.9;279;138;4.3;0.49
+2021;Provincia;Mendoza;5369.8;1258;1200;4.3;0.95
+2021;Provincia;Misiones;1837.8;607;395;3.0;0.65
+2021;Provincia;Neuquén;1570.2;428;381;3.7;0.89
+2021;Provincia;Río Negro;6675.2;996;1051;6.7;1.06
+2021;Provincia;Salta;1909.2;545;421;3.5;0.77
+2021;Provincia;San Juan;2382.7;679;437;3.5;0.64
+2021;Provincia;San Luis;3364.1;944;588;3.6;0.62
+2021;Provincia;Santa Cruz;792.5;237;124;3.3;0.52
+2021;Provincia;Santa Fe;18065.9;3180;2788;5.7;0.88
+2021;Provincia;Santiago del Estero;1023.8;295;223;3.5;0.76
+2021;Provincia;Tierra del Fuego, Antártida e Islas del Atlántico Sur;762.7;153;237;5.0;1.55
+2021;Provincia;Tucumán;6292.4;1442;974;4.4;0.68
+2021;Región;Centro;40698.9;8270;6598;4.9;0.80
+2021;Región;Cuyo;11116.6;2881;2137;3.9;0.74
+2021;Región;Metropolitana;157721.6;17783;20001;8.9;1.12
+2021;Región;NEA;5808.9;1655;1300;3.5;0.79
+2021;Región;NOA;12847.6;3320;2122;3.9;0.64
+2021;Región;Patagonia;13810.3;2732;2491;5.1;0.91
+2022;País;Total País;454186.4;36864;24344;12.3;0.66
+2022;Provincia;Buenos Aires;159413.6;10519;7860;15.2;0.75
+2022;Provincia;C.A.B.A.;139786.3;7591;10635;18.4;1.40
+2022;Provincia;Catamarca;1674.5;385;155;4.3;0.40
+2022;Provincia;Chaco;2865.3;400;255;7.2;0.64
+2022;Provincia;Chubut;5144.1;534;397;9.6;0.74
+2022;Provincia;Corrientes;3084.1;589;551;5.2;0.94
+2022;Provincia;Córdoba;36100.0;4354;2862;8.3;0.66
+2022;Provincia;Entre Ríos;4972.6;613;494;8.1;0.81
+2022;Provincia;Formosa;1460.3;90;85;16.2;0.94
+2022;Provincia;Jujuy;3416.2;424;288;8.1;0.68
+2022;Provincia;La Pampa;1853.9;388;373;4.8;0.96
+2022;Provincia;La Rioja;1728.5;272;136;6.4;0.50
+2022;Provincia;Mendoza;9677.7;1260;1006;7.7;0.80
+2022;Provincia;Misiones;3351.3;639;378;5.2;0.59
+2022;Provincia;Neuquén;5038.2;418;308;12.1;0.74
+2022;Provincia;Río Negro;12328.4;1023;811;12.1;0.79
+2022;Provincia;Salta;3400.2;569;341;6.0;0.60
+2022;Provincia;San Juan;4087.5;658;361;6.2;0.55
+2022;Provincia;San Luis;5227.1;923;514;5.7;0.56
+2022;Provincia;Santa Cruz;1548.2;228;123;6.8;0.54
+2022;Provincia;Santa Fe;33988.5;3265;2367;10.4;0.72
+2022;Provincia;Santiago del Estero;1614.0;302;205;5.3;0.68
+2022;Provincia;Tierra del Fuego, Antártida e Islas del Atlántico Sur;2048.9;141;158;14.5;1.12
+2022;Provincia;Tucumán;10377.0;1279;739;8.1;0.58
+2022;Región;Centro;75061.1;8232;5576;9.1;0.68
+2022;Región;Cuyo;18992.3;2841;1797;6.7;0.63
+2022;Región;Metropolitana;299199.9;18110;15962;16.5;0.88
+2022;Región;NEA;10761.0;1718;1177;6.3;0.69
+2022;Región;NOA;22210.4;3231;1737;6.9;0.54
+2022;Región;Patagonia;27961.7;2732;2021;10.2;0.74
+2023;País;Total País;1150562.2;35994;18870;32.0;0.52
+2023;Provincia;Buenos Aires;402300.0;10410;6360;38.6;0.61
+2023;Provincia;C.A.B.A.;353020.0;7254;7818;48.7;1.08
+2023;Provincia;Catamarca;5878.4;361;121;16.3;0.34
+2023;Provincia;Chaco;8018.4;400;206;20.0;0.52
+2023;Provincia;Chubut;14577.1;534;348;27.3;0.65
+2023;Provincia;Corrientes;9341.8;576;506;16.2;0.88
+2023;Provincia;Córdoba;90343.8;3694;2174;24.5;0.59
+2023;Provincia;Entre Ríos;12682.6;625;458;20.3;0.73
+2023;Provincia;Formosa;2930.9;85;55;34.5;0.65
+2023;Provincia;Jujuy;7516.0;441;223;17.0;0.51
+2023;Provincia;La Pampa;5416.5;389;251;13.9;0.65
+2023;Provincia;La Rioja;5997.8;317;119;18.9;0.38
+2023;Provincia;Mendoza;27451.4;1375;855;20.0;0.62
+2023;Provincia;Misiones;9385.9;651;307;14.4;0.47
+2023;Provincia;Neuquén;7874.2;421;273;18.7;0.65
+2023;Provincia;Río Negro;25744.0;1026;762;25.1;0.74
+2023;Provincia;Salta;8195.8;551;264;14.9;0.48
+2023;Provincia;San Juan;11305.2;638;294;17.7;0.46
+2023;Provincia;San Luis;13505.9;842;402;16.0;0.48
+2023;Provincia;Santa Cruz;4204.3;240;107;17.5;0.45
+2023;Provincia;Santa Fe;87765.2;3215;1947;27.3;0.61
+2023;Provincia;Santiago del Estero;3680.4;331;179;11.1;0.54
+2023;Provincia;Tierra del Fuego, Antártida e Islas del Atlántico Sur;4855.5;168;174;28.9;1.04
+2023;Provincia;Tucumán;28571.1;1450;589;19.7;0.41
+2023;Región;Centro;190791.6;7534;4419;25.3;0.59
+2023;Región;Cuyo;52262.5;2855;1467;18.3;0.51
+2023;Región;Metropolitana;755320.0;17664;12178;42.8;0.69
+2023;Región;NEA;29677.0;1712;1018;17.3;0.59
+2023;Región;NOA;59839.5;3451;1388;17.3;0.40
+2023;Región;Patagonia;62671.6;2778;1796;22.6;0.65

@@ -1,0 +1,416 @@
+anio;id_pfi;cupo;region_cofecyt;provincia;tema;sector;vertical;tecnologias;vertical_tecnologia
+2022;BA-1-PFI-2022;SI;METROPOLITANA;BUENOS AIRES;Energía y minería;PRIVADO;Energía y minería;IA;Energía y minería / IA
+2022;BA-2-PFI-2022;SI;METROPOLITANA;BUENOS AIRES;Energía y minería;PRIVADO;Energía y minería;IA;Energía y minería / IA
+2022;BA-3-PFI-2022;SI;METROPOLITANA;BUENOS AIRES;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2022;BA-4-PFI-2022;SI;METROPOLITANA;BUENOS AIRES;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2022;BA-5-PFI-2022;SI;METROPOLITANA;BUENOS AIRES;Salud;PRIVADO;Salud;Sin especificar;Salud / Sin especificar
+2022;CAB-1-PFI-2022;SI;METROPOLITANA;CABA;Salud;PRIVADO;Salud;Sin especificar;Salud / Sin especificar
+2022;CAB-2-PFI-2022;SI;METROPOLITANA;CABA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;CAB-3-PFI-2022;SI;METROPOLITANA;CABA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;CAB-5-PFI-2022;SI;METROPOLITANA;CABA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;CA-1-PFI-2022;SI;NOA;CATAMARCA;Energía y minería;PUBLICO;Energía y minería;IA;Energía y minería / IA
+2022;CA-2-PFI-2022;SI;NOA;CATAMARCA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;CA-3-PFI-2022;SI;NOA;CATAMARCA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;CA-4-PFI-2022;SI;NOA;CATAMARCA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;CA-5-PFI-2022;SI;NOA;CATAMARCA;Energía y minería;PUBLICO;Energía y minería;IA;Energía y minería / IA
+2022;CA-6-PFI-2022;SI;NOA;CATAMARCA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;CA-7-PFI-2022;SI;NOA;CATAMARCA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;CA-8-PFI-2022;SI;NOA;CATAMARCA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;CH-1-PFI-2022;SI;NEA;CHACO;"Agroindustria, IA";PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;CH-2-PFI-2022;SI;NEA;CHACO;"Agroindustria, IA";PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;CH-3-PFI-2022;SI;NEA;CHACO;"Agroindustria, Biotecnología/Nanotecnología";PUBLICO;Agroindustria;Bio y Nanotecnología;Agroindustria / Bio y Nanotecnología
+2022;CH-4-PFI-2022;SI;NEA;CHACO;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2022;CH-5-PFI-2022;SI;NEA;CHACO;"Energía y minería, IA";PRIVADO;Energía y minería;IA;Energía y minería / IA
+2022;CH-6-PFI-2022;SI;NEA;CHACO;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2022;CH-7-PFI-2022;SI;NEA;CHACO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;CH-8-PFI-2022;SI;NEA;CHACO;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;CH-9-PFI-2022;SI;NEA;CHACO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;CH-10-PFI-2022;SI;NEA;CHACO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;CH-11-PFI-2022;SI;NEA;CHACO;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;CT-1-PFI-2022;SI;PATAGONIA;CHUBUT;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;CT-2-PFI-2022;SI;PATAGONIA;CHUBUT;"Agroindustria, Biotecnología/Nanotecnología";PUBLICO;Agroindustria;Bio y Nanotecnología;Agroindustria / Bio y Nanotecnología
+2022;CT-3-PFI-2022;SI;PATAGONIA;CHUBUT;IA;PUBLICO;Sin especificar;Sin especificar;Sin especificar / Sin especificar
+2022;CT-4-PFI-2022;SI;PATAGONIA;CHUBUT;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2022;CT-5-PFI-2022;SI;PATAGONIA;CHUBUT;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;CB-1-PFI-2022;SI;CENTRO;CORDOBA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;CB-2-PFI-2022;SI;CENTRO;CORDOBA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;CB-3-PFI-2022;SI;CENTRO;CORDOBA;Energía y minería;PUBLICO;Energía y minería;IA;Energía y minería / IA
+2022;CB-4-PFI-2022;SI;CENTRO;CORDOBA;Energía y minería;PUBLICO;Energía y minería;IA;Energía y minería / IA
+2022;CB-5-PFI-2022;SI;CENTRO;CORDOBA;Salud;PRIVADO;Salud;Sin especificar;Salud / Sin especificar
+2022;CB-6-PFI-2022;SI;CENTRO;CORDOBA;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;CB-7-PFI-2022;SI;CENTRO;CORDOBA;Energía y minería;PRIVADO;Energía y minería;IA;Energía y minería / IA
+2022;CB-9-PFI-2022;SI;CENTRO;CORDOBA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;CB-10-PFI-2022;SI;CENTRO;CORDOBA;"Agroindustria, Biotecnología/Nanotecnología";PRIVADO;Agroindustria;Bio y Nanotecnología;Agroindustria / Bio y Nanotecnología
+2022;CR-1-PFI-2022;SI;NEA;CORRIENTES;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2022;CR-2-PFI-2022;SI;NEA;CORRIENTES;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;CR-3-PFI-2022;SI;NEA;CORRIENTES;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;CR-4-PFI-2022;SI;NEA;CORRIENTES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;CR-6-PFI-2022;SI;NEA;CORRIENTES;"Energía y minería, Agroindustria";PRIVADO;Agroindustria;IA;Agroindustria / IA
+2022;CR-7-PFI-2022;SI;NEA;CORRIENTES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;CR-8-PFI-2022;SI;NEA;CORRIENTES;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2022;CR-9-PFI-2022;SI;NEA;CORRIENTES;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2022;CR-10-PFI-2022;SI;NEA;CORRIENTES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;CR-12-PFI-2022;SI;NEA;CORRIENTES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;ER-1-PFI-2022;SI;CENTRO;ENTRE RÍOS;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;ER-2-PFI-2022;SI;CENTRO;ENTRE RÍOS;"IA, TICS";PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2022;ER-3-PFI-2022;SI;CENTRO;ENTRE RÍOS;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;ER-4-PFI-2022;SI;CENTRO;ENTRE RÍOS;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2022;ER-5-PFI-2022;SI;CENTRO;ENTRE RÍOS;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;ER-6-PFI-2022;SI;CENTRO;ENTRE RÍOS;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;ER-7-PFI-2022;SI;CENTRO;ENTRE RÍOS;"TICs, Salud";PUBLICO;Salud;TICs;Salud / TICs
+2022;ER-8-PFI-2022;SI;CENTRO;ENTRE RÍOS;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;ER-9-PFI-2022;SI;CENTRO;ENTRE RÍOS;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;FO-1-PFI-2022;SI;NEA;FORMOSA;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;FO-2-PFI-2022;SI;NEA;FORMOSA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;FO-3-PFI-2022;SI;NEA;FORMOSA;"IA, Salud";PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;FO-4-PFI-2022;SI;NEA;FORMOSA;TICs;PRIVADO;Sin especificar;TICs;Sin especificar / TICs
+2022;FO-5-PFI-2022;SI;NEA;FORMOSA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;FO-6-PFI-2022;SI;NEA;FORMOSA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;JY-1-PFI-2022;SI;NOA;JUJUY;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;JY-2-PFI-2022;SI;NOA;JUJUY;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;JY-3-PFI-2022;SI;NOA;JUJUY;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;JY-4-PFI-2022;SI;NOA;JUJUY;"Agroindustria, Biotecnología/Nanotecnología";PUBLICO;Agroindustria;Bio y Nanotecnología;Agroindustria / Bio y Nanotecnología
+2022;JY-5-PFI-2022;SI;NOA;JUJUY;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;JY-6-PFI-2022;SI;NOA;JUJUY;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;JY-7-PFI-2022;SI;NOA;JUJUY;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;JY-8-PFI-2022;SI;NOA;JUJUY;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;JY-10-PFI-2022;SI;NOA;JUJUY;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;LP-1-PFI-2022;SI;PATAGONIA;LA PAMPA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;LP-2-PFI-2022;SI;PATAGONIA;LA PAMPA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;LP-3-PFI-2022;SI;PATAGONIA;LA PAMPA;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2022;LP-4-PFI-2022;SI;PATAGONIA;LA PAMPA;Energía y minería;PUBLICO;Energía y minería;IA;Energía y minería / IA
+2022;LP-5-PFI-2022;SI;PATAGONIA;LA PAMPA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;LP-6-PFI-2022;SI;PATAGONIA;LA PAMPA;"Agroindustria, Economía del conocimiento";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2022;LP-7-PFI-2022;SI;PATAGONIA;LA PAMPA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;LP-9-PFI-2022;SI;PATAGONIA;LA PAMPA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;LP-10-PFI-2022;SI;PATAGONIA;LA PAMPA;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;LR-1-PFI-2022;SI;NOA;LA RIOJA;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;LR-2-PFI-2022;SI;NOA;LA RIOJA;"TICs, Salud";PUBLICO;Salud;TICs;Salud / TICs
+2022;LR-3-PFI-2022;SI;NOA;LA RIOJA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;LR-4-PFI-2022;SI;NOA;LA RIOJA;"IA, Economía del conocimiento";PUBLICO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2022;LR-5-PFI-2022;SI;NOA;LA RIOJA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;LR-6-PFI-2022;SI;NOA;LA RIOJA;"Tecnología espacial y satelital, Nanotecnología";PUBLICO;Sin especificar;IA;Sin especificar / IA
+2022;LR-7-PFI-2022;SI;NOA;LA RIOJA;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;LR-8-PFI-2022;SI;NOA;LA RIOJA;"IA, Economía del conocimiento";PRIVADO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2022;LR-9-PFI-2022;SI;NOA;LA RIOJA;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;LR-10-PFI-2022;SI;NOA;LA RIOJA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;MZ-1-PFI-2022;SI;CUYO;MENDOZA;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2022;MZ-2-PFI-2022;SI;CUYO;MENDOZA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;MZ-3-PFI-2022;SI;CUYO;MENDOZA;Energía y minería;PUBLICO;Energía y minería;IA;Energía y minería / IA
+2022;MZ-4-PFI-2022;SI;CUYO;MENDOZA;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2022;MZ-5-PFI-2022;SI;CUYO;MENDOZA;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;MZ-6-PFI-2022;SI;CUYO;MENDOZA;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;MZ-7-PFI-2022;SI;CUYO;MENDOZA;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2022;MZ-8-PFI-2022;SI;CUYO;MENDOZA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;MI-1-PFI-2022;SI;NEA;MISIONES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;MI-2-PFI-2022;SI;NEA;MISIONES;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;MI-3-PFI-2022;SI;NEA;MISIONES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;MI-4-PFI-2022;SI;NEA;MISIONES;Economía del conocimiento;PUBLICO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2022;MI-5-PFI-2022;SI;NEA;MISIONES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;MI-6-PFI-2022;SI;NEA;MISIONES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;MI-7-PFI-2022;SI;NEA;MISIONES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;MI-8-PFI-2022;SI;NEA;MISIONES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;MI-9-PFI-2022;SI;NEA;MISIONES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;MI-10-PFI-2022;SI;NEA;MISIONES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;MI-11-PFI-2022;SI;NEA;MISIONES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;MI-12-PFI-2022;SI;NEA;MISIONES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;MI-13-PFI-2022;SI;NEA;MISIONES;IA;PUBLICO;Sin especificar;Sin especificar;Sin especificar / Sin especificar
+2022;NQN-1-PFI-2022;SI;PATAGONIA;NEUQUÉN;IA;PUBLICO;Sin especificar;Sin especificar;Sin especificar / Sin especificar
+2022;NQN-2-PFI-2022;SI;PATAGONIA;NEUQUÉN;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2022;NQN-3-PFI-2022;SI;PATAGONIA;NEUQUÉN;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;NQN-4-PFI-2022;SI;PATAGONIA;NEUQUÉN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;RN-1-PFI-2022;SI;PATAGONIA;RÍO NEGRO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;RN-2-PFI-2022;SI;PATAGONIA;RÍO NEGRO;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2022;RN-3-PFI-2022;SI;PATAGONIA;RÍO NEGRO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;RN-4-PFI-2022;SI;PATAGONIA;RÍO NEGRO;TICs;PRIVADO;Sin especificar;TICs;Sin especificar / TICs
+2022;RN-5-PFI-2022;SI;PATAGONIA;RÍO NEGRO;Energía y minería;PUBLICO;Energía y minería;IA;Energía y minería / IA
+2022;RN-6-PFI-2022;SI;PATAGONIA;RÍO NEGRO;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;RN-7-PFI-2022;SI;PATAGONIA;RÍO NEGRO;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;RN-8-PFI-2022;SI;PATAGONIA;RÍO NEGRO;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;RN-9-PFI-2022;SI;PATAGONIA;RÍO NEGRO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;RN-10-PFI-2022;SI;PATAGONIA;RÍO NEGRO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SA-1-PFI-2022;SI;NOA;SALTA;Salud;PRIVADO;Salud;Sin especificar;Salud / Sin especificar
+2022;SA-2-PFI-2022;SI;NOA;SALTA;TICs Salud;PUBLICO;Salud;TICs;Salud / TICs
+2022;SA-3-PFI-2022;SI;NOA;SALTA;"Agroindustria, Biotecnología/Nanotecnología";PRIVADO;Agroindustria;Bio y Nanotecnología;Agroindustria / Bio y Nanotecnología
+2022;SA-4-PFI-2022;SI;NOA;SALTA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;SA-5-PFI-2022;SI;NOA;SALTA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;SA-6-PFI-2022;SI;NOA;SALTA;Energía y minería;PUBLICO;Energía y minería;IA;Energía y minería / IA
+2022;SA-7-PFI-2022;SI;NOA;SALTA;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2022;SJ-1-PFI-2022;SI;CUYO;SAN JUAN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SJ-2-PFI-2022;SI;CUYO;SAN JUAN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;SJ-3-PFI-2022;SI;CUYO;SAN JUAN;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2022;SJ-4-PFI-2022;SI;CUYO;SAN JUAN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SJ-5-PFI-2022;SI;CUYO;SAN JUAN;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;SJ-6-PFI-2022;SI;CUYO;SAN JUAN;Salud;PRIVADO;Salud;Sin especificar;Salud / Sin especificar
+2022;SJ-7-PFI-2022;SI;CUYO;SAN JUAN;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2022;SL-1-PFI-2022;SI;CUYO;SAN LUIS;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;SL-2-PFI-2022;SI;CUYO;SAN LUIS;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SL-3-PFI-2022;SI;CUYO;SAN LUIS;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2022;SL-4-PFI-2022;SI;CUYO;SAN LUIS;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SL-5-PFI-2022;SI;CUYO;SAN LUIS;Energía y minería;PUBLICO;Energía y minería;IA;Energía y minería / IA
+2022;SL-6-PFI-2022;SI;CUYO;SAN LUIS;Economía del conocimiento;PUBLICO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2022;SC-1-PFI-2022;SI;PATAGONIA;SANTA CRUZ;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SC-2-PFI-2022;SI;PATAGONIA;SANTA CRUZ;Energía y minería;PUBLICO;Energía y minería;IA;Energía y minería / IA
+2022;SC-3-PFI-2022;SI;PATAGONIA;SANTA CRUZ;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2022;SC-4-PFI-2022;SI;PATAGONIA;SANTA CRUZ;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;SF-1-PFI-2022;SI;CENTRO;SANTA FE;Salud;PRIVADO;Salud;Sin especificar;Salud / Sin especificar
+2022;SF-2-PFI-2022;SI;CENTRO;SANTA FE;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;SF-3-PFI-2022;SI;CENTRO;SANTA FE;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SF-4-PFI-2022;SI;CENTRO;SANTA FE;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;SF-5-PFI-2022;SI;CENTRO;SANTA FE;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2022;SF-6-PFI-2022;SI;CENTRO;SANTA FE;Energía y minería;PRIVADO;Energía y minería;IA;Energía y minería / IA
+2022;SF-7-PFI-2022;SI;CENTRO;SANTA FE;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2022;SF-8-PFI-2022;SI;CENTRO;SANTA FE;Energía y minería;PUBLICO;Energía y minería;IA;Energía y minería / IA
+2022;SF-9-PFI-2022;SI;CENTRO;SANTA FE;"TICs, Salud";PUBLICO;Salud;TICs;Salud / TICs
+2022;SF-11-PFI-2022;SI;CENTRO;SANTA FE;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SE-1-PFI-2022;SI;NOA;SANTIAGO DEL ESTERO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SE-2-PFI-2022;SI;NOA;SANTIAGO DEL ESTERO;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SE-3-PFI-2022;SI;NOA;SANTIAGO DEL ESTERO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SE-4-PFI-2022;SI;NOA;SANTIAGO DEL ESTERO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SE-5-PFI-2022;SI;NOA;SANTIAGO DEL ESTERO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SE-6-PFI-2022;SI;NOA;SANTIAGO DEL ESTERO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;SE-7-PFI-2022;SI;NOA;SANTIAGO DEL ESTERO;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;TF-1-PFI-2022;SI;PATAGONIA;TIERRA DEL FUEGO;"Economía del conocimiento, IA";PUBLICO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2022;TF-2-PFI-2022;SI;PATAGONIA;TIERRA DEL FUEGO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;TF-3-PFI-2022;SI;PATAGONIA;TIERRA DEL FUEGO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;TF-4-PFI-2022;SI;PATAGONIA;TIERRA DEL FUEGO;Tecnología espacial y satelital;PUBLICO;Sin especificar;IA;Sin especificar / IA
+2022;TF-5-PFI-2022;SI;PATAGONIA;TIERRA DEL FUEGO;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2022;TF-6-PFI-2022;SI;PATAGONIA;TIERRA DEL FUEGO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;TF-7-PFI-2022;SI;PATAGONIA;TIERRA DEL FUEGO;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2022;TF-8-PFI-2022;SI;PATAGONIA;TIERRA DEL FUEGO;TICs;PRIVADO;Sin especificar;TICs;Sin especificar / TICs
+2022;TU-1-PFI-2022;SI;NOA;TUCUMÁN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;TU-2-PFI-2022;SI;NOA;TUCUMÁN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;TU-3-PFI-2022;SI;NOA;TUCUMÁN;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;TU-4-PFI-2022;SI;NOA;TUCUMÁN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2022;TU-5-PFI-2022;SI;NOA;TUCUMÁN;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;TU-6-PFI-2022;SI;NOA;TUCUMÁN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2022;TU-7-PFI-2022;SI;NOA;TUCUMÁN;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2022;TU-8-PFI-2022;SI;NOA;TUCUMÁN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;RN-1-PFI-2023;SI;PATAGONIA;RIO NEGRO;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;RN-2-PFI-2023;SI;PATAGONIA;RIO NEGRO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;RN-3-PFI-2023;SI;PATAGONIA;RIO NEGRO;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;RN-4-PFI-2023;SI;PATAGONIA;RIO NEGRO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;RN-6-PFI-2023;SI;PATAGONIA;RIO NEGRO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;RN-7-PFI-2023;SI;PATAGONIA;RIO NEGRO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;RN-8-PFI-2023;SI;PATAGONIA;RIO NEGRO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;RN-9-PFI-2023;SI;PATAGONIA;RIO NEGRO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;RN-10-PFI-2023;SI;PATAGONIA;RIO NEGRO;Economía del conocimiento y la innovación;PUBLICO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2023;RN-11-PFI-2023;SI;PATAGONIA;RIO NEGRO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;FO-1-PFI-2023;SI;NEA;FORMOSA;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;FO-2-PFI-2023;SI;NEA;FORMOSA;"Biotecnología y Nanotecnología, Salud";PRIVADO;Salud;IA;Salud / IA
+2023;FO-3-PFI-2023;SI;NEA;FORMOSA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;FO-4-PFI-2023;SI;NEA;FORMOSA;IA;PRIVADO;Sin especificar;Sin especificar;Sin especificar / Sin especificar
+2023;FO-5-PFI-2023;SI;NEA;FORMOSA;"Agroindustria, Economía del conocimiento y la innovación";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2023;FO-6-PFI-2023;SI;NEA;FORMOSA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CT-1-PFI-2023;SI;PATAGONIA;CHUBUT;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;CT-2-PFI-2023;SI;PATAGONIA;CHUBUT;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CT-3-PFI-2023;SI;PATAGONIA;CHUBUT;"Agroindustria, Economía del conocimiento y la innovación";PRIVADO;Agroindustria;IA;Agroindustria / IA
+2023;CT-4-PFI-2023;SI;PATAGONIA;CHUBUT;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;CT-5-PFI-2023;SI;PATAGONIA;CHUBUT;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CT-6-PFI-2023;SI;PATAGONIA;CHUBUT;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;LP-1-PFI-2023;SI;PATAGONIA;LA PAMPA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;LP-2-PFI-2023;SI;PATAGONIA;LA PAMPA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;LP-3-PFI-2023;SI;PATAGONIA;LA PAMPA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;LP-4-PFI-2023;SI;PATAGONIA;LA PAMPA;IA;PUBLICO;Sin especificar;Sin especificar;Sin especificar / Sin especificar
+2023;LP-5-PFI-2023;SI;PATAGONIA;LA PAMPA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;LP-6-PFI-2023;SI;PATAGONIA;LA PAMPA;"Agroindustria, Economía del conocimiento y la innovación";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2023;SC-1-PFI-2023;SI;PATAGONIA;SANTA CRUZ;Energía;PRIVADO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;SC-2-PFI-2023;SI;PATAGONIA;SANTA CRUZ;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;SC-3-PFI-2023;SI;PATAGONIA;SANTA CRUZ;Energía;PRIVADO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;SC-4-PFI-2023;SI;PATAGONIA;SANTA CRUZ;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;SC-5-PFI-2023;SI;PATAGONIA;SANTA CRUZ;"Agroindustria, Economía del conocimiento y la innovación";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2023;SC-6-PFI-2023;SI;PATAGONIA;SANTA CRUZ;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;SA-1-PFI-2023;SI;NOA;SALTA;Economía del conocimiento y la innovación;PUBLICO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2023;SA-2-PFI-2023;SI;NOA;SALTA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;SA-3-PFI-2023;SI;NOA;SALTA;"Economía del conocimiento y la  innovación, Agroindustria, Salud";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2023;SA-4-PFI-2023;SI;NOA;SALTA;"Economía del conocimiento, Salud";PRIVADO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2023;SA-5-PFI-2023;SI;NOA;SALTA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;SA-6-PFI-2023;SI;NOA;SALTA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;SA-7-PFI-2023;SI;NOA;SALTA;IA;PUBLICO;Sin especificar;Sin especificar;Sin especificar / Sin especificar
+2023;SA-8-PFI-2023;SI;NOA;SALTA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;SA-9-PFI-2023;SI;NOA;SALTA;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;MI -1-PFI-2023;SI;NEA;MISIONES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;MI -2-PFI-2023;SI;NEA;MISIONES;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2023;MI -3-PFI-2023;SI;NEA;MISIONES;Economía del conocimiento y la innovación;PUBLICO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2023;MI -4-PFI-2023;SI;NEA;MISIONES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;MI -5-PFI-2023;SI;NEA;MISIONES;"Agroindustria, Biotecnología y Nanotecnología";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2023;MI -6-PFI-2023;SI;NEA;MISIONES;Salud;PRIVADO;Salud;Sin especificar;Salud / Sin especificar
+2023;MI -7-PFI-2023;SI;NEA;MISIONES;Biotecnología y Nanotecnología;PUBLICO;Sin especificar;IA;Sin especificar / IA
+2023;MI -8-PFI-2023;SI;NEA;MISIONES;"Salud, IA";PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;MI -9-PFI-2023;SI;NEA;MISIONES;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;MI -10-PFI-2023;SI;NEA;MISIONES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;MI -11-PFI-2023;SI;NEA;MISIONES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;MI -13-PFI-2023;SI;NEA;MISIONES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;MI -14-PFI-2023;SI;NEA;MISIONES;Biotecnología y Nanotecnología;PUBLICO;Sin especificar;IA;Sin especificar / IA
+2023;SE-1-PFI-2023;SI;NOA;SANTIAGO DEL ESTERO;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;SE-2-PFI-2023;SI;NOA;SANTIAGO DEL ESTERO;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;SE-3-PFI-2023;SI;NOA;SANTIAGO DEL ESTERO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;SE-4-PFI-2023;SI;NOA;SANTIAGO DEL ESTERO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;SE-5-PFI-2023;SI;NOA;SANTIAGO DEL ESTERO;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;SE-6-PFI-2023;SI;NOA;SANTIAGO DEL ESTERO;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2023;SE-7-PFI-2023;SI;NOA;SANTIAGO DEL ESTERO;"Agroindustria, TICs";PUBLICO;Agroindustria;TICs;Agroindustria / TICs
+2023;CH-1-PFI-2023;SI;NEA;CHACO;Biotecnología y Nanotecnología;PUBLICO;Sin especificar;IA;Sin especificar / IA
+2023;CH-2-PFI-2023;SI;NEA;CHACO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CH-3-PFI-2023;SI;NEA;CHACO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CH-4-PFI-2023;SI;NEA;CHACO;agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;CH-5-PFI-2023;SI;NEA;CHACO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CH-6-PFI-2023;SI;NEA;CHACO;IA;PUBLICO;Sin especificar;Sin especificar;Sin especificar / Sin especificar
+2023;CH-7-PFI-2023;SI;NEA;CHACO;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;CH-8-PFI-2023;SI;NEA;CHACO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CH-9-PFI-2023;SI;NEA;CHACO;Biotecnología y Nanotecnología;PUBLICO;Sin especificar;IA;Sin especificar / IA
+2023;CH-10-PFI-2023;SI;NEA;CHACO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;CH-11-PFI-2023;SI;NEA;CHACO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CH-12-PFI-2023;SI;NEA;CHACO;"Agroindustria, Economía del conocimiento y la innovación";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2023;CH-13-PFI-2023;SI;NEA;CHACO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CH-14-PFI-2023;SI;NEA;CHACO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CH-15-PFI-2023;SI;NEA;CHACO;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;CH-16-PFI-2023;SI;NEA;CHACO;"Agroindustria, Biotecnología y Nanotecnología";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2023;JY-1-PFI-2023;SI;NOA;JUJUY;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;JY-2-PFI-2023;SI;NOA;JUJUY;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;JY-3-PFI-2023;SI;NOA;JUJUY;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;JY-4-PFI-2023;SI;NOA;JUJUY;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;JY-5-PFI-2023;SI;NOA;JUJUY;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;JY-6-PFI-2023;SI;NOA;JUJUY;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;JY-7-PFI-2023;SI;NOA;JUJUY;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;JY-8-PFI-2023;SI;NOA;JUJUY;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;JY-9-PFI-2023;SI;NOA;JUJUY;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;JY-10-PFI-2023;SI;NOA;JUJUY;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;JY-11-PFI-2023;SI;NOA;JUJUY;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;CR-1-PFI-2023;SI;NEA;CORRIENTES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;CR-2-PFI-2023;SI;NEA;CORRIENTES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;CR-3-PFI-2023;SI;NEA;CORRIENTES;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2023;CR-4-PFI-2023;SI;NEA;CORRIENTES;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;CR-5-PFI-2023;SI;NEA;CORRIENTES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CR-6-PFI-2023;SI;NEA;CORRIENTES;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2023;CR-7-PFI-2023;SI;NEA;CORRIENTES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CR-8-PFI-2023;SI;NEA;CORRIENTES;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;CR-9-PFI-2023;SI;NEA;CORRIENTES;Energía;PRIVADO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;CR-10-PFI-2023;SI;NEA;CORRIENTES;Energía;PUBLICO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;CR-11-PFI-2023;SI;NEA;CORRIENTES;Energía;PUBLICO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;CR-12-PFI-2023;SI;NEA;CORRIENTES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CR-13-PFI-2023;SI;NEA;CORRIENTES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CR-14-PFI-2023;SI;NEA;CORRIENTES;Energía;PUBLICO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;CR-15-PFI-2023;SI;NEA;CORRIENTES;Economía del conocimiento y la innovación;PUBLICO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2023;CR-16-PFI-2023;SI;NEA;CORRIENTES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CR-17-PFI-2023;SI;NEA;CORRIENTES;"Agroindustria, Economía del conocimiento y la innovación";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2023;BA-1-PFI-2023;SI;METROPOLITANA;BUENOS AIRES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;BA-2-PFI-2023;SI;METROPOLITANA;BUENOS AIRES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;BA-3-PFI-2023;SI;METROPOLITANA;BUENOS AIRES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;BA-4-PFI-2023;SI;METROPOLITANA;BUENOS AIRES;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;BA-5-PFI-2023;SI;METROPOLITANA;BUENOS AIRES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;BA-6-PFI-2023;SI;METROPOLITANA;BUENOS AIRES;Energía;PUBLICO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;BA-7-PFI-2023;SI;METROPOLITANA;BUENOS AIRES;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;CA-1-PFI-2023;SI;NOA;CATAMARCA;"TICs, Salud";PUBLICO;Salud;TICs;Salud / TICs
+2023;CA-2-PFI-2023;SI;NOA;CATAMARCA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;CA-3-PFI-2023;SI;NOA;CATAMARCA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CA-4-PFI-2023;SI;NOA;CATAMARCA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;CA-5-PFI-2023;SI;NOA;CATAMARCA;Energía;PUBLICO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;CA-6-PFI-2023;SI;NOA;CATAMARCA;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2023;CA-7-PFI-2023;SI;NOA;CATAMARCA;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2023;CA-8-PFI-2023;SI;NOA;CATAMARCA;"Agroindustria, Biotecnología y Nanotecnología";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2023;CA-9-PFI-2023;SI;NOA;CATAMARCA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CA-10-PFI-2023;SI;NOA;CATAMARCA;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;CA-11-PFI-2023;SI;NOA;CATAMARCA;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;CA-12-PFI-2023;SI;NOA;CATAMARCA;IA;PUBLICO;Sin especificar;Sin especificar;Sin especificar / Sin especificar
+2023;CA-13-PFI-2023;SI;NOA;CATAMARCA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CB-1-PFI-2023;SI;CENTRO;CORDOBA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;CB-2-PFI-2023;SI;CENTRO;CORDOBA;"Energia, Biotecnología y Nanotecnología";PUBLICO;Energía y minería;IA;Energía y minería / IA
+2023;CB-3-PFI-2023;SI;CENTRO;CORDOBA;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;CB-4-PFI-2023;SI;CENTRO;CORDOBA;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2023;CB-5-PFI-2023;SI;CENTRO;CORDOBA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;CB-6-PFI-2023;SI;CENTRO;CORDOBA;"Salud, IA";PRIVADO;Salud;Sin especificar;Salud / Sin especificar
+2023;CB-7-PFI-2023;SI;CENTRO;CORDOBA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;CB-8-PFI-2023;SI;CENTRO;CORDOBA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;CB-9-PFI-2023;SI;CENTRO;CORDOBA;"Biotecnología y Nanotecnología, Salud";PRIVADO;Salud;IA;Salud / IA
+2023;CB-10-PFI-2023;SI;CENTRO;CORDOBA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;CB-11-PFI-2023;SI;CENTRO;CORDOBA;Energía;PUBLICO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;CB-12-PFI-2023;SI;CENTRO;CORDOBA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;ER-1-PFI-2023;SI;CENTRO;ENTRE RIOS;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;ER-2-PFI-2023;SI;CENTRO;ENTRE RIOS;"TICs, Salud";PUBLICO;Salud;TICs;Salud / TICs
+2023;ER-3-PFI-2023;SI;CENTRO;ENTRE RIOS;Economía del conocimiento y la innovación;PUBLICO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2023;ER-4-PFI-2023;SI;CENTRO;ENTRE RIOS;Biotecnología y Nanotecnología;PUBLICO;Sin especificar;IA;Sin especificar / IA
+2023;ER-5-PFI-2023;SI;CENTRO;ENTRE RIOS;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;ER-6-PFI-2023;SI;CENTRO;ENTRE RIOS;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;ER-7-PFI-2023;SI;CENTRO;ENTRE RIOS;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;ER-8-PFI-2023;SI;CENTRO;ENTRE RIOS;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;ER-9-PFI-2023;SI;CENTRO;ENTRE RIOS;"Agroindustria, Biotecnología y Nanotecnología";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2023;ER-10-PFI-2023;SI;CENTRO;ENTRE RIOS;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;SL-1-PFI-2023;SI;CUYO;SAN LUIS;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;SL-2-PFI-2023;SI;CUYO;SAN LUIS;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;SL-3-PFI-2023;SI;CUYO;SAN LUIS;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;SL-4-PFI-2023;SI;CUYO;SAN LUIS;Energía;PUBLICO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;SL-5-PFI-2023;SI;CUYO;SAN LUIS;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;SL-6-PFI-2023;SI;CUYO;SAN LUIS;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;SL-7-PFI-2023;SI;CUYO;SAN LUIS;Energía;PUBLICO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;SL-8-PFI-2023;SI;CUYO;SAN LUIS;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;TF-1-PFI-2023;SI;PATAGONIA;TIERRA DEL FUEGO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;TF-2-PFI-2023;SI;PATAGONIA;TIERRA DEL FUEGO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;TF-3-PFI-2023;SI;PATAGONIA;TIERRA DEL FUEGO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;TF-4-PFI-2023;SI;PATAGONIA;TIERRA DEL FUEGO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;TF-5-PFI-2023;SI;PATAGONIA;TIERRA DEL FUEGO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;TF-6-PFI-2023;SI;PATAGONIA;TIERRA DEL FUEGO;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;TU-1-PFI-2023;SI;NOA;TUCUMAN;Energía;PRIVADO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;TU-2-PFI-2023;SI;NOA;TUCUMAN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;TU-3-PFI-2023;SI;NOA;TUCUMAN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;TU-4-PFI-2023;SI;NOA;TUCUMAN;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;TU-5-PFI-2023;SI;NOA;TUCUMAN;"Agroindustria, TICs";PUBLICO;Agroindustria;TICs;Agroindustria / TICs
+2023;TU-6-PFI-2023;SI;NOA;TUCUMAN;"Agroindustria 
+Energía";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2023;TU-7-PFI-2023;SI;NOA;TUCUMAN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;TU-8-PFI-2023;SI;NOA;TUCUMAN;Salud;PRIVADO;Salud;Sin especificar;Salud / Sin especificar
+2023;TU-9-PFI-2023;SI;NOA;TUCUMAN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;TU-10-PFI-2023;SI;NOA;TUCUMAN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;TU-11-PFI-2023;SI;NOA;TUCUMAN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;TU-12-PFI-2023;SI;NOA;TUCUMAN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;TU-13-PFI-2023;SI;NOA;TUCUMAN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;TU-14-PFI-2023;SI;NOA;TUCUMAN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;TU-15-PFI-2023;SI;NOA;TUCUMAN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;NQN-1-PFI-2023;SI;PATAGONIA;NEUQUEN;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;NQN-2-PFI-2023;SI;PATAGONIA;NEUQUEN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;NQN-3-PFI-2023;SI;PATAGONIA;NEUQUEN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;NQN-4-PFI-2023;SI;PATAGONIA;NEUQUEN;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;NQN-5-PFI-2023;SI;PATAGONIA;NEUQUEN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;NQN-6-PFI-2023;SI;PATAGONIA;NEUQUEN;Energía;PUBLICO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;NQN-7-PFI-2023;SI;PATAGONIA;NEUQUEN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;NQN-8-PFI-2023;SI;PATAGONIA;NEUQUEN;Energía;PUBLICO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;NQN-9-PFI-2023;SI;PATAGONIA;NEUQUEN;Energía;PUBLICO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;NQN-10-PFI-2023;SI;PATAGONIA;NEUQUEN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;LR-1-PFI-2023;SI;NOA;LA RIOJA;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;LR-2-PFI-2023;SI;NOA;LA RIOJA;Economía del conocimiento y la innovación;PUBLICO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2023;LR-3-PFI-2023;SI;NOA;LA RIOJA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;LR-4-PFI-2023;SI;NOA;LA RIOJA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;LR-5-PFI-2023;SI;NOA;LA RIOJA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;LR-6-PFI-2023;SI;NOA;LA RIOJA;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;LR-7-PFI-2023;SI;NOA;LA RIOJA;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;LR-8-PFI-2023;SI;NOA;LA RIOJA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;LR-9-PFI-2023;SI;NOA;LA RIOJA;Economía del conocimiento y la innovación;PRIVADO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2023;LR-10-PFI-2023;SI;NOA;LA RIOJA;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;LR-11-PFI-2023;SI;NOA;LA RIOJA;TICs;PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;LR-12-PFI-2023;SI;NOA;LA RIOJA;Energía;PRIVADO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;LR-13-PFI-2023;SI;NOA;LA RIOJA;Energía;PUBLICO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;CAB-1-PFI-2023;SI;METROPOLITANA;CABA;Energía;PUBLICO;Energía y minería;Sin especificar;Energía y minería / Sin especificar
+2023;CAB-2-PFI-2023;SI;METROPOLITANA;CABA;Salud;PRIVADO;Salud;Sin especificar;Salud / Sin especificar
+2023;SF-1-PFI-2023;SI;CENTRO;SANTA FE;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;SF-2-PFI-2023;SI;CENTRO;SANTA FE;Economía del conocimiento y la innovación;PUBLICO;Economía del conocimiento y la innovación;IA;Economía del conocimiento y la innovación / IA
+2023;SF-3-PFI-2023;SI;CENTRO;SANTA FE;"Biotecnología y Nanotecnología";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2023;SJ-1-PFI-2023;SI;CUYO;SAN JUAN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;SJ-2-PFI-2023;SI;CUYO;SAN JUAN;Salud;PRIVADO;Salud;Sin especificar;Salud / Sin especificar
+2023;SJ-3-PFI-2023;SI;CUYO;SAN JUAN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;SJ-4-PFI-2023;SI;CUYO;SAN JUAN;Salud;PRIVADO;Salud;Sin especificar;Salud / Sin especificar
+2023;SJ-5-PFI-2023;SI;CUYO;SAN JUAN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;SJ-6-PFI-2023;SI;CUYO;SAN JUAN;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;SJ-7-PFI-2023;SI;CUYO;SAN JUAN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;SJ-8-PFI-2023;SI;CUYO;SAN JUAN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;SJ-9-PFI-2023;SI;CUYO;SAN JUAN;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;SJ-10-PFI-2023;SI;CUYO;SAN JUAN;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;MZ-1-PFI-2023;SI;CUYO;MENDOZA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;MZ-2-PFI-2023;SI;CUYO;MENDOZA;Agroindustria;PRIVADO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;MZ-3-PFI-2023;SI;CUYO;MENDOZA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;MZ-4-PFI-2023;SI;CUYO;MENDOZA;Agroindustria;PUBLICO;Agroindustria;Sin especificar;Agroindustria / Sin especificar
+2023;MZ-5-PFI-2023;SI;CUYO;MENDOZA;"Biotecnología y Nanotecnología";PUBLICO;Agroindustria;IA;Agroindustria / IA
+2023;MZ-6-PFI-2023;SI;CUYO;MENDOZA;Salud;PUBLICO;Salud;Sin especificar;Salud / Sin especificar
+2023;MZ-7-PFI-2023;SI;CUYO;MENDOZA;Otro;PUBLICO;Otro;Otro;Otro / Otro
+2023;MZ-8-PFI-2023;SI;CUYO;MENDOZA;Otro;PRIVADO;Otro;Otro;Otro / Otro
+2023;MZ-9-PFI-2023;SI;CUYO;MENDOZA;"Agroindustria";PRIVADO;Agroindustria;TICs;Agroindustria / TICs
+2023;MZ-10-PFI-2023;SI;CUYO;MENDOZA;"TICs Gobierno digital";PUBLICO;Sin especificar;TICs;Sin especificar / TICs
+2023;MZ-11-PFI-2023;SI;CUYO;MENDOZA;Otro;PRIVADO;Otro;Otro;Otro / Otro

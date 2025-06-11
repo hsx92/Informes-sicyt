@@ -1,0 +1,132 @@
+unidad_territorial;sistema_nacional;cant_equipos;nivel_agregacion
+Buenos Aires;Citometría de Flujo;12;Provincia
+Buenos Aires;Computación de Alto Desempeño;15;Provincia
+Buenos Aires;Espectrometría de Masas;39;Provincia
+Buenos Aires;Láseres;19;Provincia
+Buenos Aires;Magnetometría;14;Provincia
+Buenos Aires;Microscopía;53;Provincia
+Buenos Aires;Rayos X;26;Provincia
+Buenos Aires;Resonancia Magnética;7;Provincia
+C.A.B.A.;Citometría de Flujo;14;Provincia
+C.A.B.A.;Computación de Alto Desempeño;7;Provincia
+C.A.B.A.;Espectrometría de Masas;14;Provincia
+C.A.B.A.;Láseres;12;Provincia
+C.A.B.A.;Magnetometría;7;Provincia
+C.A.B.A.;Microscopía;41;Provincia
+C.A.B.A.;Rayos X;6;Provincia
+C.A.B.A.;Resonancia Magnética;9;Provincia
+Catamarca;Microscopía;1;Provincia
+Chaco;Espectrometría de Masas;1;Provincia
+Chubut;Espectrometría de Masas;1;Provincia
+Chubut;Microscopía;2;Provincia
+Chubut;Rayos X;1;Provincia
+Corrientes;Citometría de Flujo;2;Provincia
+Corrientes;Computación de Alto Desempeño;3;Provincia
+Corrientes;Espectrometría de Masas;1;Provincia
+Corrientes;Microscopía;1;Provincia
+Córdoba;Citometría de Flujo;8;Provincia
+Córdoba;Computación de Alto Desempeño;6;Provincia
+Córdoba;Espectrometría de Masas;16;Provincia
+Córdoba;Láseres;14;Provincia
+Córdoba;Magnetometría;2;Provincia
+Córdoba;Microscopía;22;Provincia
+Córdoba;Rayos X;13;Provincia
+Córdoba;Resonancia Magnética;5;Provincia
+Entre Ríos;Computación de Alto Desempeño;1;Provincia
+Entre Ríos;Espectrometría de Masas;4;Provincia
+Entre Ríos;Microscopía;4;Provincia
+Jujuy;Espectrometría de Masas;1;Provincia
+Jujuy;Microscopía;2;Provincia
+Jujuy;Rayos X;1;Provincia
+La Rioja;Espectrometría de Masas;2;Provincia
+Mendoza;Citometría de Flujo;1;Provincia
+Mendoza;Computación de Alto Desempeño;2;Provincia
+Mendoza;Espectrometría de Masas;8;Provincia
+Mendoza;Microscopía;5;Provincia
+Misiones;Espectrometría de Masas;1;Provincia
+Misiones;Rayos X;1;Provincia
+Neuquén;Espectrometría de Masas;1;Provincia
+Neuquén;Microscopía;1;Provincia
+Neuquén;Rayos X;1;Provincia
+Río Negro;Computación de Alto Desempeño;4;Provincia
+Río Negro;Espectrometría de Masas;2;Provincia
+Río Negro;Láseres;4;Provincia
+Río Negro;Magnetometría;6;Provincia
+Río Negro;Microscopía;10;Provincia
+Río Negro;Rayos X;4;Provincia
+Río Negro;Resonancia Magnética;2;Provincia
+Salta;Microscopía;2;Provincia
+San Juan;Espectrometría de Masas;1;Provincia
+San Juan;Microscopía;1;Provincia
+San Luis;Citometría de Flujo;1;Provincia
+San Luis;Computación de Alto Desempeño;2;Provincia
+San Luis;Espectrometría de Masas;4;Provincia
+San Luis;Microscopía;2;Provincia
+San Luis;Rayos X;4;Provincia
+Santa Cruz;Microscopía;2;Provincia
+Santa Fe;Citometría de Flujo;3;Provincia
+Santa Fe;Computación de Alto Desempeño;6;Provincia
+Santa Fe;Espectrometría de Masas;12;Provincia
+Santa Fe;Láseres;1;Provincia
+Santa Fe;Microscopía;15;Provincia
+Santa Fe;Rayos X;6;Provincia
+Santa Fe;Resonancia Magnética;7;Provincia
+Santiago del Estero;Láseres;1;Provincia
+Santiago del Estero;Microscopía;2;Provincia
+Tucumán;Citometría de Flujo;1;Provincia
+Tucumán;Computación de Alto Desempeño;1;Provincia
+Tucumán;Espectrometría de Masas;4;Provincia
+Tucumán;Láseres;2;Provincia
+Tucumán;Magnetometría;1;Provincia
+Tucumán;Microscopía;6;Provincia
+Tucumán;Rayos X;1;Provincia
+Tucumán;Resonancia Magnética;1;Provincia
+Centro;Citometría de Flujo;11;Región
+Centro;Computación de Alto Desempeño;13;Región
+Centro;Espectrometría de Masas;32;Región
+Centro;Láseres;15;Región
+Centro;Magnetometría;2;Región
+Centro;Microscopía;41;Región
+Centro;Rayos X;19;Región
+Centro;Resonancia Magnética;12;Región
+Cuyo;Citometría de Flujo;2;Región
+Cuyo;Computación de Alto Desempeño;4;Región
+Cuyo;Espectrometría de Masas;13;Región
+Cuyo;Microscopía;8;Región
+Cuyo;Rayos X;4;Región
+Metropolitana;Citometría de Flujo;26;Región
+Metropolitana;Computación de Alto Desempeño;22;Región
+Metropolitana;Espectrometría de Masas;53;Región
+Metropolitana;Láseres;31;Región
+Metropolitana;Magnetometría;21;Región
+Metropolitana;Microscopía;94;Región
+Metropolitana;Rayos X;32;Región
+Metropolitana;Resonancia Magnética;16;Región
+NEA;Citometría de Flujo;2;Región
+NEA;Computación de Alto Desempeño;3;Región
+NEA;Espectrometría de Masas;3;Región
+NEA;Microscopía;1;Región
+NEA;Rayos X;1;Región
+NOA;Citometría de Flujo;1;Región
+NOA;Computación de Alto Desempeño;1;Región
+NOA;Espectrometría de Masas;7;Región
+NOA;Láseres;3;Región
+NOA;Magnetometría;1;Región
+NOA;Microscopía;13;Región
+NOA;Rayos X;2;Región
+NOA;Resonancia Magnética;1;Región
+Patagonia;Computación de Alto Desempeño;4;Región
+Patagonia;Espectrometría de Masas;4;Región
+Patagonia;Láseres;4;Región
+Patagonia;Magnetometría;6;Región
+Patagonia;Microscopía;15;Región
+Patagonia;Rayos X;6;Región
+Patagonia;Resonancia Magnética;2;Región
+Total País;Citometría de Flujo;42;País
+Total País;Computación de Alto Desempeño;47;País
+Total País;Espectrometría de Masas;112;País
+Total País;Láseres;53;País
+Total País;Magnetometría;30;País
+Total País;Microscopía;172;País
+Total País;Rayos X;64;País
+Total País;Resonancia Magnética;31;País

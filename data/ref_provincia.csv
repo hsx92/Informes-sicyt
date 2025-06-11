@@ -1,0 +1,25 @@
+provincia_id;provincia;codigo_indec;region_mincyt;region_iso;region_cofecyt
+1;C.A.B.A.;02;PAMPEANA;Capital Federal;Metropolitana
+3;Buenos Aires;06;PAMPEANA;Buenos Aires;Metropolitana
+4;Catamarca;10;NOA;Catamarca;NOA
+5;Córdoba;14;PAMPEANA;Córdoba;Centro
+6;Corrientes;18;NEA;Corrientes;NEA
+7;Chaco;22;NEA;Chaco;NEA
+8;Chubut;26;PATAGONICA;Chubut;Patagonia
+9;Entre Ríos;30;PAMPEANA;Entre Ríos;Centro
+10;Formosa;34;NEA;Formosa;NEA
+11;Jujuy;38;NOA;Jujuy;NOA
+12;La Pampa;42;PAMPEANA;La Pampa;Patagonia
+13;La Rioja;46;NOA;La Rioja;NOA
+14;Mendoza;50;CUYO;Mendoza;Cuyo
+15;Misiones;54;NEA;Misiones;NEA
+16;Neuquén;58;PATAGONICA;Neuquén;Patagonia
+17;Río Negro;62;PATAGONICA;Río Negro;Patagonia
+18;Salta;66;NOA;Salta;NOA
+19;San Juan;70;CUYO;San Juan;Cuyo
+20;San Luis;74;CUYO;San Luis;Cuyo
+21;Santa Cruz;78;PATAGONICA;Santa Cruz;Patagonia
+22;Santa Fe;82;PAMPEANA;Santa Fe;Centro
+23;Santiago del Estero;86;NOA;Santiago del Estero;NOA
+24;Tucumán;90;NOA;Tucumán;NOA
+25;Tierra del Fuego, Antártida e Islas del Atlántico Sur;94;PATAGONICA;Tierra del Fuego;Patagonia

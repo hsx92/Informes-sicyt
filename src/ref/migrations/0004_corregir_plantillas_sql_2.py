@@ -1,87 +1,214 @@
-# en src/ref/migrations/0003_corregir_plantillas_sql.py
-
 from django.db import migrations
 
-def cargar_definicion_panorama_provincial_corregida(apps, schema_editor):
+
+def cargar_definiciones_atomicas(apps, schema_editor):
     """
-    Esta función borra las definiciones existentes y las vuelve a crear con las
-    plantillas SQL correctas.
+    Crea los componentes para la Sección 1 con las plantillas SQL
+    definitivas y correctas.
     """
     Informe = apps.get_model('ref', 'Informe')
     Componente = apps.get_model('ref', 'Componente')
     InformeComposicion = apps.get_model('ref', 'InformeComposicion')
 
-    # La función primero borra todo, asegurando una carga limpia.
+    # Limpiamos las definiciones previas
     Informe.objects.all().delete()
     Componente.objects.all().delete()
+    InformeComposicion.objects.all().delete()
 
-    kpi_poblacion = Componente.objects.create(
-        nombre="KPI Población",
-        tipo_componente="KPI",
-        estado='ACTIVO',
+    # --- Componentes 1.1: KPIs que usan provincia_id para 'Provincia' ---
+    # (Estos KPIs son específicos para una provincia y
+    # requieren el ID de la provincia)
+    kpi_poblacion_prov = Componente.objects.create(
+        nombre="KPI: Población Provincial (2022)",
         parametros_requeridos={"params": ["provincia_id"]},
-        config_visualizacion={"format": "int", "suffix": " hab."},
-        # Corregido para usar el 'id' del modelo IndicadoresContexto
-        plantilla_sql="SELECT poblacion_censo_2022 FROM indicadores_contexto_y_sicytar WHERE provincia_id = {{ provincia_id }};"
-    )
-    
-    kpi_investigadores = Componente.objects.create(
-        nombre="KPI Cantidad de Investigadores",
-        tipo_componente="KPI",
-        estado='ACTIVO',
-        parametros_requeridos={"params": ["provincia_id"]},
-        config_visualizacion={"format": "int", "suffix": " investigadores"},
-        # CORRECCIÓN: 'investigador' en minúsculas y usando 'id'
-        plantilla_sql="SELECT investigador FROM indicadores_contexto_y_sicytar WHERE provincia_id = {{ provincia_id }};"
-    )
-    
-    kpi_tasa_investigadores = Componente.objects.create(
-        nombre="KPI Tasa Investigadores por millón de hab.",
-        tipo_componente="KPI",
-        estado='ACTIVO',
-        parametros_requeridos={"params": ["provincia_id"]},
-        config_visualizacion={"format": "float", "suffix": " por millón hab."},
-        # Corregido para usar el 'id' del modelo IndicadoresContexto
-        plantilla_sql="SELECT tasa_inv_millon_hab FROM indicadores_contexto_y_sicytar WHERE provincia_id = {{ provincia_id }};"
+        config_visualizacion={
+            "format": "int",
+            "label": "Población"
+        },
+        plantilla_sql="""
+            SELECT poblacion_censo_2022
+            FROM indicadores_contexto_y_sicytar
+            WHERE provincia_id = {{ provincia_id }};
+        """
     )
 
-    comp_grafico_inversion = Componente.objects.create(
-        nombre="Gráfico Comparativo de Inversión en I+D - Provincia vs Región y País",
+    kpi_tasa_actividad_prov = Componente.objects.create(
+        nombre="KPI Provincial: Tasa de Actividad (%)",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id"]},
+        config_visualizacion={"format": "float", "suffix": "%"},
+        plantilla_sql="""
+            SELECT tasas_actividad_eph_3trim_2024
+            FROM indicadores_contexto_y_sicytar
+            WHERE provincia_id = {{ provincia_id }};
+        """
+    )
+
+    kpi_tasa_desempleo_prov = Componente.objects.create(
+        nombre="KPI Provincial: Tasa de Desempleo (%)",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id"]},
+        config_visualizacion={"format": "float", "suffix": "%"},
+        plantilla_sql="""
+            SELECT tasa_desocupacion_eph_3trim_2024
+            FROM indicadores_contexto_y_sicytar
+            WHERE provincia_id = {{ provincia_id }};
+        """
+    )
+
+    # --- KPIs que usan unidad_territorial para 'Total País' ---
+    # (Estos KPIs son generales y no requieren un ID de provincia específico)
+    kpi_tasa_actividad_nac = Componente.objects.create(
+        nombre="KPI Nacional: Tasa de Actividad (%)",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={},
+        config_visualizacion={"format": "float", "suffix": "%"},
+        plantilla_sql="""
+            SELECT tasas_actividad_eph_3trim_2024
+            FROM indicadores_contexto_y_sicytar
+            WHERE provincia_id = 99;
+        """
+    )
+
+    kpi_tasa_desempleo_nac = Componente.objects.create(
+        nombre="KPI Nacional: Tasa de Desempleo (%)",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={},
+        config_visualizacion={"format": "float", "suffix": "%"},
+        plantilla_sql="""
+            SELECT tasa_desocupacion_eph_3trim_2024
+            FROM indicadores_contexto_y_sicytar
+            WHERE provincia_id = 99;
+        """
+    )
+
+    # --- Componente 1.2: Gráfico de Exportaciones de los 5 principales productos (Barras Horizontales) ---
+    grafico_expo_top5 = Componente.objects.create(
+        nombre="Gráfico: Exportaciones de los 5 principales productos (millones USD FOB) ({{ anio }})",
+        tipo_componente="GRAFICO.barh",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_nombre", "anio"]},
+        config_visualizacion={
+            "plot_mapping": {"x": "{{ anio }}", "y": "gran_rubro"},
+            "layout": {
+                "title": {"text": "Top 5 Productos Exportados ({{ anio }})"},
+                "xaxis": {"title": {"text": "Millones USD FOB"}},
+                "yaxis": {"title": {"text": ""}, "autorange": "reversed"}
+            }
+        },
+        plantilla_sql="""
+            SELECT "{{ anio }}", gran_rubro
+            FROM expo_por_provincia_top5
+            WHERE provincia = '{{ provincia_nombre }}'
+            ORDER BY "{{ anio }}" DESC
+            LIMIT 5;
+        """
+    )
+
+    # --- Componente 2.1: Evolución de la inversión I+D regional y provincial (Gráfico de Líneas) ---
+    grafico_evolucion_regional = Componente.objects.create(
+        nombre="Evolución de la inversión en I+D regional y provincial (Histórico, millones de pesos constantes 2004)",
         tipo_componente="GRAFICO.line",
         estado='ACTIVO',
         parametros_requeridos={"params": ["provincia_id"]},
         config_visualizacion={
-            "layout": { "title": {"text": "Evolución de la Inversión en I+D"}, "xaxis": {"title": {"text": "Año"}}, "yaxis": {"title": {"text": "Monto (Pesos Constantes 2004)"}} }
+            "plot_mapping": {
+                "x": "anio",
+                "y": "inversion_constante",
+                "color": "unidad_territorial"
+            },
+            "layout": {
+                "title": {"text": "Evolución de la inversión I+D (millones de pesos constantes 2004)"},
+                "xaxis": {"title": {"text": "Año"}},
+                "yaxis": {"title": {"text": "Monto (Pesos Constantes)"}}
+            }
         },
-        # CORRECCIÓN: 'anio' en lugar de 'anio_id'
         plantilla_sql="""
             SELECT anio, unidad_territorial, SUM(monto_inversion_constante_2004) as inversion_constante
             FROM inversion_id_ract_esid_provincia_region_pais
             WHERE unidad_territorial IN (
                 (SELECT provincia FROM ref_provincia WHERE provincia_id = {{ provincia_id }}),
-                (SELECT region_cofecyt FROM ref_provincia WHERE provincia_id = {{ provincia_id }}),
-                'País'
+                (SELECT region_cofecyt FROM ref_provincia WHERE provincia_id = {{ provincia_id }})
             )
             GROUP BY anio, unidad_territorial ORDER BY anio, unidad_territorial;
         """
     )
 
-    informe_panorama = Informe.objects.create(
-        nombre="Panorama Provincial",
-        descripcion="Informe automático que presenta una visión general de los principales indicadores de C&T de una provincia.",
+    # --- Componente 2.2: Inversión por investigador en la región (Barras Horizontales) ---
+    grafico_inv_por_investigador = Componente.objects.create(
+        nombre="Inversión por investigador en las provincias de la región ({{ anio }})",
+        tipo_componente="GRAFICO.barh",
         estado='ACTIVO',
-        version=1
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "plot_mapping": {"x": "inversion_investigador", "y": "unidad_territorial"},
+            "layout": {
+                "title": {"text": "Inversión por investigador en la región ({{ anio }})"},
+                "xaxis": {"title": {"text": "Inversión por Investigador (Pesos Constantes)"}},
+                "yaxis": {"title": {"text": ""}, "autorange": "reversed"}
+            }
+        },
+        plantilla_sql="""
+            SELECT unidad_territorial, inversion_investigador
+            FROM inversion_y_articulos_por_investigador_provincia_region_pais
+            WHERE anio = {{ anio }} AND nivel_agregacion = 'Provincia' AND unidad_territorial IN (
+                SELECT provincia FROM ref_provincia
+                WHERE region_cofecyt = (
+                    SELECT region_cofecyt FROM ref_provincia WHERE provincia_id = {{ provincia_id }}
+                )
+            )
+            ORDER BY inversion_investigador DESC;
+        """
     )
 
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_poblacion, orden=10)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_investigadores, orden=20)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_investigadores, orden=30)
-    InformeComposicion.objects.create(
-        informe=informe_panorama,
-        componente=comp_grafico_inversion,
-        orden=40,
-        config_override={"layout": {"title": {"text": "Inversión en I+D: {{ provincia_nombre }} vs. Región y País"}}}
+    # --- Componente 2.3: Inversión de empresas en I+D por sector (Gráfico de Barras Horizontales) ---
+    grafico_inv_empresaria_sector = Componente.objects.create(
+        nombre="Inversión de empresas en I+D por sector ({{ anio }})",
+        tipo_componente="GRAFICO.barh",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "plot_mapping": {"x": "monto_inversion", "y": "sector_clae"},
+            "layout": {
+                "title": {"text": "Inversión de empresas por sector ({{ anio }})"},
+                "xaxis": {"title": {"text": "Monto (Pesos Constantes)"}},
+                "yaxis": {"title": {"text": ""}, "autorange": "reversed"}
+            }
+        },
+
+        plantilla_sql="""
+            SELECT sector_clae, SUM(monto_inversion_constante_2004) AS monto_inversion
+            FROM esid_inversion_sectores_provincia_region_pais
+            WHERE unidad_territorial = (
+                SELECT provincia FROM ref_provincia WHERE provincia_id = {{ provincia_id }}
+            ) AND anio = {{ anio }}
+            GROUP BY sector_clae
+            ORDER BY monto_inversion DESC;
+        """
     )
+
+    
+    # --- Creamos y Componemos el Informe ---
+    informe_panorama, created = Informe.objects.get_or_create(
+        nombre="Panorama Provincial",
+        defaults={
+            "descripcion": "Informe automático basado en el modelo 'Panorama provincial - Chaco.pdf'",
+            "estado": 'ACTIVO', "version": 1
+        }
+    )
+    
+    # Limpiamos la composición anterior antes de añadir la nueva
+    InformeComposicion.objects.filter(informe=informe_panorama).delete()
+    
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_poblacion_prov, orden=10)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_actividad_prov, orden=20)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_actividad_nac, orden=21)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_desempleo_prov, orden=30)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_desempleo_nac, orden=31)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_expo_top5, orden=40)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_evolucion_regional, orden=200)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_inv_por_investigador, orden=210)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_inv_empresaria_sector, orden=220)
 
 
 class Migration(migrations.Migration):
@@ -91,5 +218,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(cargar_definicion_panorama_provincial_corregida),
+        migrations.RunPython(cargar_definiciones_atomicas),
     ]

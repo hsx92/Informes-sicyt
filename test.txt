@@ -1,0 +1,24 @@
+from ref.models import Informe
+from ref.generador import GeneradorInforme
+import logging
+
+# Para ver los logs informativos en la consola
+logging.basicConfig(level=logging.INFO)
+
+# Obtenemos el informe "Panorama Provincial"
+informe_prueba = Informe.objects.get(nombre="Panorama Provincial")
+
+# Definimos los parámetros de la prueba (usando Mendoza como acordamos)
+params = {
+    "provincia_id": 14, 
+    "provincia_nombre": "Mendoza",
+    "anio": 2023,
+}
+
+# Creamos una instancia del Generador
+generador = GeneradorInforme(informe_id=informe_prueba.id)
+
+# Ejecutamos la generación
+print("\n--- Iniciando la prueba de generación del informe con SQL corregido... ---")
+resultados = generador.generar(params=params)
+print("\n--- Proceso finalizado. ---")

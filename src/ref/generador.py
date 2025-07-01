@@ -1,6 +1,9 @@
 import logging
+import os
+from django.conf import settings
 import pandas as pd
-import plotly.express as px
+import plotly.graph_objects as go
+import plotly.io as pio
 from jinja2 import Environment, meta
 
 from .models import Informe
@@ -48,10 +51,8 @@ class GeneradorInforme:
         mapping = config.get("plot_mapping", {}).copy()
         layout_config = config.get("layout", {}).copy()
         env = Environment()
-        
-        # --- INICIO DE LA LÓGICA DE RENDERIZADO ---
 
-        # 1. Renderizado dinámico del mapeo de ejes
+        # Renderizado dinámico del mapeo de ejes
         rendered_mapping = {}
         for key, template_str in mapping.items():
             if isinstance(template_str, str) and "{{" in template_str:
@@ -62,7 +63,7 @@ class GeneradorInforme:
             else:
                 rendered_mapping[key] = template_str  # Usar el valor tal cual si no es una plantilla
 
-        # 2. Renderizado dinámico del título del layout
+        # Renderizado dinámico del título del layout
         title_config = layout_config.get("title", {})
         template_str_titulo = title_config.get("text", "")
         if isinstance(template_str_titulo, str) and "{{" in template_str_titulo:
@@ -71,21 +72,22 @@ class GeneradorInforme:
             contexto = {k: v for k, v in params.items() if k in variables}
             title_config["text"] = env.from_string(template_str_titulo).render(contexto)
             layout_config["title"] = title_config
-        
-        # 3. Limpieza de datos
-        x_col, y_col = rendered_mapping.get("x"), rendered_mapping.get("y")
 
-        if tipo_grafico == "GRAFICO.barh":
+        # Validación de columnas requeridas
+        x_col, y_col, color_col = rendered_mapping.get("x"), rendered_mapping.get("y"), rendered_mapping.get("color")
+
+        # Limpieza de datos
+        if tipo_grafico == "barh":
             # Para barras horizontales, solo el eje X es numérico
             df[x_col] = pd.to_numeric(df[x_col], errors='coerce')
             df.dropna(subset=[x_col], inplace=True) # Validamos solo la columna numérica
-        
-        elif tipo_grafico == "GRAFICO.line":
+
+        elif tipo_grafico == "line":
             # Para líneas, ambos ejes suelen ser numéricos
             df[x_col] = pd.to_numeric(df[x_col], errors='coerce')
             df[y_col] = pd.to_numeric(df[y_col], errors='coerce')
             df.dropna(subset=[x_col, y_col], inplace=True)
-        
+
         # Verificamos si el DataFrame sigue teniendo datos después de la limpieza
         print(df.head())  # Para depuración, muestra las primeras filas del DataFrame
         logger.info(f"DataFrame después de limpieza: {df.shape[0]} filas, {df.shape[1]} columnas")
@@ -93,23 +95,71 @@ class GeneradorInforme:
         if df.empty:
             logger.warning("DataFrame vacío después de la limpieza. No se puede generar gráfico.")
             return None
+        
+        # Creamos la figura de Plotly
+        fig = go.Figure() # Creamos una figura vacía
 
         # Selección de la función de gráfico correcta
-        if tipo_grafico == "GRAFICO.barh":
-            fig = px.bar(df, x=x_col, y=y_col, orientation='h', text_auto=True)
-        elif tipo_grafico == "GRAFICO.line":
-            fig = px.line(df, x=x_col, y=y_col)
+        if tipo_grafico == "line":
+            # Para gráficos de líneas, agrupamos por la columna de color para crear una traza por cada serie
+            for name, group in df.groupby(color_col):
+                fig.add_trace(
+                    go.Scatter(
+                        x=group[x_col],
+                        y=group[y_col],
+                        name=name,
+                        mode='lines+markers'
+                    )
+                )
+
+        elif tipo_grafico == "barh":
+            # Para barras horizontales, añadimos una única traza
+            fig.add_trace(
+                go.Bar(
+                    x=df[x_col],
+                    y=df[y_col],
+                    orientation='h',
+                    text=df[x_col],
+                    textposition='auto'
+                )
+            )
+
+        elif tipo_grafico == "pie":
+            fig.add_trace(
+                go.Pie(
+                    labels=df[x_col],
+                    values=df[y_col],
+                    hole=layout_config.get("hole", 0)
+                )
+            )
 
         fig.update_layout(**layout_config)
+
+        # --- GUARDAR COMO HTML ---
+        try:
+            # Construimos una ruta segura al directorio de salida
+            output_dir = os.path.join(settings.BASE_DIR, '..', 'output')
+            os.makedirs(output_dir, exist_ok=True) # Crea el directorio si no existe
+            
+            # Generamos un nombre de archivo descriptivo
+            nombre_archivo = f"{title_config['text']}_{tipo_grafico}.html"
+            ruta_completa = os.path.join(output_dir, nombre_archivo)
+            
+            fig.write_html(ruta_completa)
+            logger.info(f"Gráfico guardado exitosamente en: {ruta_completa}")
+
+        except Exception as e:
+            logger.error(f"No se pudo guardar el gráfico como HTML: {e}")
+
         return fig.to_json()
 
     def generar(self, params: dict):
         """ Ejecuta el flujo completo para generar el informe. """
         logger.info(f"Iniciando generación de informe '{self.informe.nombre}' con parámetros: {params}")
         resultados_componentes = []
-        
+
         composicion = self.informe.informecomposicion_set.order_by('orden')
-        
+
         for item_composicion in composicion:
             componente = item_composicion.componente
             logger.info(f"Procesando componente (Orden {item_composicion.orden}): '{componente.nombre}'")
@@ -129,11 +179,12 @@ class GeneradorInforme:
 
             resultado_final = None
             tipo = componente.tipo_componente
+            tipo_grafico = componente.tipo_grafico
             
             if tipo == "KPI":
                 resultado_final = self._procesar_kpi(df_datos, config)
-            elif "GRAFICO" in tipo:
-                resultado_final = self._procesar_grafico(df_datos, config, params, tipo)
+            elif tipo == "GRAFICO":
+                resultado_final = self._procesar_grafico(df_datos, config, params, tipo_grafico)
             
             print(f"\n--- Resultado Final para: {componente.nombre} ---")
             print(resultado_final)

@@ -46,6 +46,31 @@ class Componente(models.Model):
         ACTIVO = 'ACTIVO', 'Activo'
         ARCHIVADO = 'ARCHIVADO', 'Archivado'
 
+    class Tipo(models.TextChoices):
+        KPI = 'KPI', 'KPI'
+        GRAFICO = 'GRAFICO', 'Gráfico'
+        TABLA = 'TABLA', 'Tabla'
+        TEXTO = 'TEXTO', 'Texto'
+
+    class TipoGrafico(models.TextChoices):
+        # Gráficos de Comparación / Relación
+        LINE = 'line', 'Líneas'
+        BAR = 'bar', 'Barras Verticales'
+        BARH = 'barh', 'Barras Horizontales'
+        SCATTER = 'scatter', 'Dispersión (Scatter Plot)'
+
+        # Gráficos de Distribución
+        HISTOGRAM = 'histogram', 'Histograma'
+        BOX = 'box', 'Cajas (Box Plot)'
+
+        # Gráficos de Proporción / Jerarquía
+        PIE = 'pie', 'Torta / Anillo'
+        TREEMAP = 'treemap', 'Mapa de Árbol (Treemap)'
+        SUNBURST = 'sunburst', 'Explosión Solar (Sunburst)'
+
+        # Gráficos Geográficos
+        MAP = 'map', 'Mapa Coroplético'
+
     nombre = models.CharField(max_length=255, unique=True)
     descripcion = models.TextField(blank=True)
     version = models.PositiveSmallIntegerField(default=1)
@@ -56,8 +81,16 @@ class Componente(models.Model):
     )
 
     tipo_componente = models.CharField(
+        max_length=20,
+        choices=Tipo.choices,
+        help_text="El tipo general del componente."
+    )
+
+    tipo_grafico = models.CharField(
         max_length=50,
-        help_text="Tipo de componente (ej: KPI, TABLA, GRAFICO.line)"
+        blank=True,
+        choices=TipoGrafico.choices,
+        help_text="Especificación del tipo de gráfico (ej: line, barh, pie)."
     )
 
     parametros_requeridos = models.JSONField(

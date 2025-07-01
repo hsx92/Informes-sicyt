@@ -37,8 +37,8 @@ class InversionID(models.Model):
 
 
 class IndicadoresContexto(models.Model):
-    provincia_id = models.IntegerField(primary_key=True, help_text="Identificador único de la provincia")
-    provincia_nombre = models.CharField(max_length=100, help_text="Nombre oficial completo de la provincia")
+    id = models.IntegerField(primary_key=True, help_text="Identificador único de la provincia")
+    provincia = models.CharField(max_length=100, help_text="Nombre oficial completo de la provincia")
     region_cofecyt = models.CharField(max_length=100, blank=True, null=True, help_text="Región según COFECYT")
     poblacion_censo_2022 = models.IntegerField(null=True, blank=True)
     superficie = models.FloatField(null=True, blank=True)

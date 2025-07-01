@@ -40,6 +40,78 @@ class GeneradorInforme:
             return f"{valor:,.2f}{sufijo}".replace(",", "X").replace(".", ",").replace("X", ".")
             
         return f"{valor}{sufijo}"
+    
+    def _procesar_tabla(self, df: pd.DataFrame, config: dict, params: dict) -> str:
+        """
+        Procesa un DataFrame, lo pivotea según la configuración y lo convierte
+        en un objeto go.Table, renderizando dinámicamente el título.
+        """
+        if df.empty:
+            return None
+
+        pivot_config = config.get("pivot")
+        if not pivot_config:
+            logger.error("La configuración de pivote es necesaria para el componente de tabla.")
+            return None
+        
+        try:
+            df_pivot = df.pivot_table(
+                index=pivot_config.get("index"),
+                columns=pivot_config.get("columns"),
+                values=pivot_config.get("values"),
+                fill_value="",
+            ).reset_index()
+        except Exception as e:
+            logger.error(f"No se pudo pivotar la tabla. Error: {e}")
+            return None
+
+        # Preparamos los datos para go.Table
+        headers = list(df_pivot.columns)
+        cell_values = [df_pivot[col] for col in headers]
+
+        # --- LÓGICA DE RENDERIZADO DE TÍTULO ---
+        layout_config = config.get("layout", {}).copy()
+        env = Environment()
+        
+        title_config = layout_config.get("title", {})
+        template_str_titulo = title_config.get("text", "")
+        if isinstance(template_str_titulo, str) and "{{" in template_str_titulo:
+            ast = env.parse(template_str_titulo)
+            variables_requeridas = meta.find_undeclared_variables(ast)
+            contexto_renderizado = {k: v for k, v in params.items() if k in variables_requeridas}
+            title_config["text"] = env.from_string(template_str_titulo).render(contexto_renderizado)
+            layout_config["title"] = title_config
+        # --- FIN DE LA NUEVA LÓGICA ---
+
+        # Creamos la figura de Plotly
+        fig = go.Figure(data=[go.Table(
+            header=dict(values=headers,
+                        fill_color='paleturquoise',
+                        align='left'),
+            cells=dict(values=cell_values,
+                       fill_color='lavender',
+                       align='left'))
+        ])
+        
+        fig.update_layout(**layout_config)
+
+        # --- GUARDAR COMO HTML ---
+        try:
+            # Construimos una ruta segura al directorio de salida
+            output_dir = os.path.join(settings.BASE_DIR, '..', 'output')
+            os.makedirs(output_dir, exist_ok=True) # Crea el directorio si no existe
+            
+            # Generamos un nombre de archivo descriptivo
+            nombre_archivo = f"{title_config['text']}.html"
+            ruta_completa = os.path.join(output_dir, nombre_archivo)
+            
+            fig.write_html(ruta_completa)
+            logger.info(f"Gráfico guardado exitosamente en: {ruta_completa}")
+
+        except Exception as e:
+            logger.error(f"No se pudo guardar el gráfico como HTML: {e}")
+
+        return fig.to_json()
 
     def _procesar_grafico(self, df: pd.DataFrame, config: dict, params: dict, tipo_grafico: str) -> str:
         """
@@ -185,7 +257,9 @@ class GeneradorInforme:
                 resultado_final = self._procesar_kpi(df_datos, config)
             elif tipo == "GRAFICO":
                 resultado_final = self._procesar_grafico(df_datos, config, params, tipo_grafico)
-            
+            elif tipo == "TABLA":
+                resultado_final = self._procesar_tabla(df_datos, config, params)
+
             print(f"\n--- Resultado Final para: {componente.nombre} ---")
             print(resultado_final)
             print("---------------------------------------------------\n")

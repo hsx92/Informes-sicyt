@@ -2,6 +2,7 @@
 
 from django.db import migrations
 
+
 def cargar_definicion_panorama_provincial_corregida(apps, schema_editor):
     """
     Esta función borra las definiciones existentes y las vuelve a crear con las

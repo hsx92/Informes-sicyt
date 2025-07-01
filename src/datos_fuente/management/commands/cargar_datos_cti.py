@@ -32,6 +32,7 @@ ARCHIVOS_A_CARGAR = {
     'proyectos_provincia_region_pais_renaprod.csv': Proyecto,
 }
 
+
 class Command(BaseCommand):
     help = 'Carga los datos de los archivos CSV de CTI en la base de datos'
 

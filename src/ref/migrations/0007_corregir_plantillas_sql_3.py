@@ -22,15 +22,16 @@ def corregir_definiciones_atomicas(apps, schema_editor):
     # requieren el ID de la provincia)
     kpi_poblacion_prov = Componente.objects.create(
         nombre="KPI: Población Provincial",
+        tipo_componente="KPI", estado='ACTIVO',
         parametros_requeridos={"params": ["provincia_id"]},
         config_visualizacion={
             "format": "int",
-            "label": "Población"
+            "suffix": " habs",
         },
         plantilla_sql="""
             SELECT poblacion_censo_2022
             FROM indicadores_contexto_y_sicytar
-            WHERE provincia_id = {{ provincia_id }};
+            WHERE id = {{ provincia_id }};
         """
     )
 
@@ -42,7 +43,7 @@ def corregir_definiciones_atomicas(apps, schema_editor):
         plantilla_sql="""
             SELECT tasas_actividad_eph_3trim_2024
             FROM indicadores_contexto_y_sicytar
-            WHERE provincia_id = {{ provincia_id }};
+            WHERE id = {{ provincia_id }};
         """
     )
 
@@ -54,7 +55,7 @@ def corregir_definiciones_atomicas(apps, schema_editor):
         plantilla_sql="""
             SELECT tasa_desocupacion_eph_3trim_2024
             FROM indicadores_contexto_y_sicytar
-            WHERE provincia_id = {{ provincia_id }};
+            WHERE id = {{ provincia_id }};
         """
     )
 
@@ -68,7 +69,7 @@ def corregir_definiciones_atomicas(apps, schema_editor):
         plantilla_sql="""
             SELECT tasas_actividad_eph_3trim_2024
             FROM indicadores_contexto_y_sicytar
-            WHERE provincia_id = 99;
+            WHERE id = 99;
         """
     )
 
@@ -80,7 +81,7 @@ def corregir_definiciones_atomicas(apps, schema_editor):
         plantilla_sql="""
             SELECT tasa_desocupacion_eph_3trim_2024
             FROM indicadores_contexto_y_sicytar
-            WHERE provincia_id = 99;
+            WHERE id = 99;
         """
     )
 
@@ -90,7 +91,7 @@ def corregir_definiciones_atomicas(apps, schema_editor):
         tipo_componente="GRAFICO",
         tipo_grafico="barh",
         estado='ACTIVO',
-        parametros_requeridos={"params": ["provincia_nombre", "anio"]},
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
         config_visualizacion={
             "plot_mapping": {"x": "{{ anio }}", "y": "gran_rubro"},
             "layout": {
@@ -102,9 +103,11 @@ def corregir_definiciones_atomicas(apps, schema_editor):
         plantilla_sql="""
             SELECT "{{ anio }}", gran_rubro
             FROM expo_por_provincia_top5
-            WHERE provincia = '{{ provincia_nombre }}'
-            ORDER BY "{{ anio }}" DESC
-            LIMIT 5;
+            WHERE provincia = (
+                SELECT provincia FROM ref_provincia 
+                WHERE provincia_id = {{ provincia_id }}
+            )
+            ORDER BY "{{ anio }}" DESC LIMIT 5;
         """
     )
 
@@ -193,6 +196,107 @@ def corregir_definiciones_atomicas(apps, schema_editor):
         """
     )
 
+    # --- 3.1: KPIs de Cantidad de Proyectos ---
+    kpi_pfi_nacional = Componente.objects.create(
+        nombre="KPI: Cantidad de proyectos PFI a nivel nacional",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={},
+        config_visualizacion={"format": "int"},
+        plantilla_sql="SELECT COUNT(id_pfi) FROM proyectos_pfi;"
+    )
+
+    kpi_pfi_regional = Componente.objects.create(
+        nombre="KPI: Cantidad de proyectos PFI a nivel regional",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id"]},
+        config_visualizacion={"format": "int"},
+        plantilla_sql="""
+            SELECT COUNT(id_pfi) FROM proyectos_pfi
+            WHERE region_cofecyt ILIKE (
+                SELECT region_cofecyt FROM ref_provincia
+                WHERE provincia_id = {{ provincia_id }}
+            );
+        """
+    )
+
+    kpi_pfi_provincial = Componente.objects.create(
+        nombre="KPI: Cantidad de proyectos PFI a nivel provincial",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id"]},
+        config_visualizacion={"format": "int"},
+        plantilla_sql="""
+            SELECT COUNT(id_pfi) FROM proyectos_pfi
+            WHERE provincia ILIKE (
+                SELECT provincia FROM ref_provincia
+                WHERE provincia_id = {{ provincia_id }}
+            );
+        """
+    )
+
+    # --- 3.2: KPIs de Porcentaje con Contraparte Privada ---
+    kpi_porc_privada_nacional = Componente.objects.create(
+        nombre="KPI: % de proyectos PFI nacionales con contraparte privada",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={},
+        config_visualizacion={"format": "float", "suffix": "%"},
+        plantilla_sql="""
+            SELECT (COUNT(*) FILTER (WHERE sector = 'PRIVADO') * 100.0 / COUNT(*))
+            FROM proyectos_pfi;
+        """
+    )
+
+    kpi_porc_privada_regional = Componente.objects.create(
+        nombre="KPI: % de proyectos PFI regionales con contraparte privada",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id"]},
+        config_visualizacion={"format": "float", "suffix": "%"},
+        plantilla_sql="""
+            SELECT (COUNT(*) FILTER (WHERE sector = 'PRIVADO') * 100.0 / COUNT(*))
+            FROM proyectos_pfi WHERE region_cofecyt ILIKE (
+                SELECT region_cofecyt FROM ref_provincia
+                WHERE provincia_id = {{ provincia_id }}
+            );
+        """
+    )
+
+    kpi_porc_privada_provincial = Componente.objects.create(
+        nombre="KPI: % de proyectos PFI provinciales con contraparte privada",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id"]},
+        config_visualizacion={"format": "float", "suffix": "%"},
+        plantilla_sql="""
+            SELECT (COUNT(*) FILTER (WHERE sector = 'PRIVADO') * 100.0 / COUNT(*))
+            FROM proyectos_pfi WHERE provincia ILIKE (
+                SELECT provincia FROM ref_provincia
+                WHERE provincia_id = {{ provincia_id }}
+            );
+        """
+    )
+
+    # --- 3.3: Tabla de Proyectos por Eje y Tecnología ---
+    tabla_pfi_cruce = Componente.objects.create(
+        nombre="Tabla: Cantidad de proyectos PFI provinciales por Eje y Tecnología Estratégica",
+        tipo_componente="TABLA",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id"]},
+        config_visualizacion={
+            "pivot": {
+                "index": "tecnologias",
+                "columns": "vertical",
+                "values": "cantidad"
+            },
+            "layout": {"title": {"text": "Proyectos PFI por Eje y Tecnología en {{ provincia_nombre }}"}}
+        },
+        plantilla_sql="""
+            SELECT tecnologias, vertical, COUNT(id_pfi) as cantidad
+            FROM proyectos_pfi WHERE provincia ILIKE (
+                SELECT provincia FROM ref_provincia
+                WHERE provincia_id = {{ provincia_id }}
+            )
+            GROUP BY tecnologias, vertical;
+        """
+    )
+
     # --- Creamos y Componemos el Informe ---
     informe_panorama, created = Informe.objects.get_or_create(
         nombre="Panorama Provincial",
@@ -215,6 +319,13 @@ def corregir_definiciones_atomicas(apps, schema_editor):
     InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_evolucion_regional, orden=200)
     InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_inv_por_investigador, orden=210)
     InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_inv_empresaria_sector, orden=220)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_pfi_nacional, orden=300)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_pfi_regional, orden=301)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_pfi_provincial, orden=302)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_porc_privada_nacional, orden=310)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_porc_privada_regional, orden=311)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_porc_privada_provincial, orden=312)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=tabla_pfi_cruce, orden=320)
 
 
 class Migration(migrations.Migration):

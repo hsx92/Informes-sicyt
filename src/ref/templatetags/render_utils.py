@@ -16,3 +16,7 @@ def render_dinamico(template_string, params):
     env = Environment()
     template = env.from_string(template_string)
     return template.render(params)
+
+
+# Register the filter with the template library
+register.filter('render_dinamico', render_dinamico)

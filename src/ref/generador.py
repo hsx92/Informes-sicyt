@@ -4,6 +4,7 @@ from django.conf import settings
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
+import plotly.io as pio
 from jinja2 import Environment, meta
 
 from .models import Informe
@@ -114,8 +115,7 @@ class GeneradorInforme:
         fig = go.Figure(data=[go.Table(header=dict(values=headers), cells=dict(values=cell_values))])
         fig.update_layout(**layout_config)
 
-        self._guardar_visualizacion_html(fig, layout_config, nombre_componente)
-        return fig.to_json()
+        return pio.to_html(fig, full_html=False, include_plotlyjs=False)
 
     def _procesar_grafico(self, df: pd.DataFrame, config: dict, params: dict, subtipo: str, nombre_componente: str) -> str:
         """ Procesa un DataFrame para generar un gráfico según el tipo especificado.
@@ -206,8 +206,7 @@ class GeneradorInforme:
             return treefig.to_json()
 
         fig.update_layout(**layout_config)
-        self._guardar_visualizacion_html(fig, layout_config, nombre_componente)
-        return fig.to_json()
+        return pio.to_html(fig, full_html=False, include_plotlyjs=False)
 
     def generar(self, params: dict):
         """ Ejecuta el flujo completo para generar el informe. """

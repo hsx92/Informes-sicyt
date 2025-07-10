@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ informe.nombre }} - {{ params.provincia_nombre }}</title>
     
-    <!-- Incluimos la librería de Plotly UNA SOLA VEZ, al principio, para que esté disponible para todos los componentes -->
+    <!-- Incluimos la librería de Plotly UNA SOLA VEZ, al principio -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     
     <!-- Estilos básicos para una presentación limpia y profesional -->
@@ -61,6 +61,10 @@
             font-weight: 400;
             margin-top: 5px;
         }
+        .visualizacion-container {
+            width: 100%;
+            min-height: 450px;
+        }
     </style>
 </head>
 <body>
@@ -70,28 +74,42 @@
         <p>Análisis para <strong>{{ params.provincia_nombre }}</strong> (Año de referencia: {{ params.anio }})</p>
     </header>
 
-    <!-- Iteramos sobre cada componente procesado que nos pasa la vista -->
+    <!-- PASO A: Creamos los contenedores vacíos para cada componente -->
     {% for comp in resultados %}
         <section class="componente">
-            <!-- Usamos nuestro filtro personalizado para renderizar títulos dinámicos -->
-            <h2>{{ comp.nombre|render_dinamico:params }}</h2>
-            
-            {% if comp.tipo == 'KPI' %}
-                <div class="kpi">
-                    {{ comp.resultado }}
-                    <span class="kpi-label">{{ comp.nombre|render_dinamico:params }}</span>
-                </div>
-
-            {% elif comp.tipo == 'GRAFICO' or comp.tipo == 'TABLA' %}
-                <!-- 
-                  Simplemente insertamos el bloque de HTML que genera el backend.
-                  El filtro 'safe' es crucial para que Django no escape los caracteres HTML
-                  y renderice la visualización correctamente.
-                -->
-                {{ comp.resultado|safe }}
-            {% endif %}
+            <h2>{{ comp.nombre }}</h2>
+            <div id="componente-{{ comp.orden }}"></div>
         </section>
     {% endfor %}
 
+    <!-- 
+      PASO B: Convertimos la lista 'resultados' a JSON de forma segura 
+      usando la etiqueta de plantilla 'json_script'. Esto crea un tag <script>
+      con el id "resultados-data" que contiene nuestros datos.
+    -->
+    {{ resultados|json_script:"resultados-data" }}
+
+    <!-- PASO C: Un único script al final que lee los datos y renderiza todo -->
+    <script>
+        // Leemos los datos desde el script que generó Django
+        const resultados = JSON.parse(document.getElementById('resultados-data').textContent);
+
+        resultados.forEach(comp => {
+            const container = document.getElementById(`componente-${comp.orden}`);
+            if (!container) return;
+
+            if (comp.tipo === 'KPI') {
+                // Para los KPIs, construimos el HTML directamente
+                container.innerHTML = `
+                    <div class="kpi">
+                        ${comp.resultado}
+                        <span class="kpi-label">${comp.nombre}</span>
+                    </div>`;
+            } else if ((comp.tipo === 'GRAFICO' || comp.tipo === 'TABLA') && comp.resultado) {
+                // Para visualizaciones, usamos Plotly con los datos y layout que preparamos en Python
+                Plotly.newPlot(container, comp.resultado.data, comp.resultado.layout);
+            }
+        });
+    </script>
 </body>
 </html>

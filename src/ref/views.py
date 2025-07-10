@@ -4,6 +4,7 @@ from datos_fuente.models import Provincia
 # from .models import Informe
 from .generador import GeneradorInforme
 import logging
+import json
 
 logger = logging.getLogger(__name__)
 
@@ -48,7 +49,7 @@ def generar_informe_api(request, informe_id):
         # 3. Preparamos el contexto para la plantilla
         contexto = {
             'informe': generador.informe,
-            'resultados': resultados,
+            'resultados': resultados,  # Pasamos el JSON como string
             'params': params,
         }
 

@@ -23,7 +23,7 @@ class InversionID(models.Model):
     anio = models.IntegerField(help_text="Año al que corresponde el dato de inversión")
     nivel_agregacion = models.CharField(max_length=50, help_text="Nivel geográfico (País, Región, Provincia)")
     unidad_territorial = models.CharField(max_length=100, help_text="Nombre de la locación geográfica")
-    tipo_institucion_ract = models.CharField(max_length=100, blank=True, null=True, help_text="Tipo de institución que realiza la inversión")
+    tipo_institucion_ract = models.CharField(max_length=100, blank=True, null=True, help_text="Tipo de institución que invirtió")
     monto_inversion = models.DecimalField(max_digits=20, decimal_places=2, help_text="Monto en pesos corrientes")
     monto_inversion_constante_2004 = models.DecimalField(max_digits=20, decimal_places=2, help_text="Monto en pesos constantes de 2004")
 
@@ -123,7 +123,7 @@ class Patente(models.Model):
     region_cofecyt = models.CharField(max_length=100, null=True, blank=True)
     renaorg_id = models.CharField(max_length=50, null=True, blank=True)
     institucion = models.CharField(max_length=255, null=True, blank=True)
-    es_institucion_nacional = models.CharField(max_length=10, null=True, blank=True)
+    es_institucion_nacional = models.BooleanField(default=False)
     letra_ipc_descripcion = models.CharField(max_length=255, null=True, blank=True)
 
     class Meta:
@@ -203,7 +203,7 @@ class ExportacionTop5(models.Model):
 class ExportacionTecnologicaDestino(models.Model):
     id = models.AutoField(primary_key=True)
     anio = models.IntegerField()
-    provincia = models.CharField(max_length=100, db_column= "cod_prov", null=True, blank=True)
+    provincia = models.CharField(max_length=100, db_column="cod_prov", null=True, blank=True)
     intensidad_tecnologica = models.BooleanField(help_text="True si alta, False si es baja")
     pais_destino = models.CharField(max_length=100)
     fob_millones_sum = models.DecimalField(max_digits=20, decimal_places=2)

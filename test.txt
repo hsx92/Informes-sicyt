@@ -20,4 +20,3 @@ generador = GeneradorInforme(informe_id=informe_prueba.id)
 # Ejecutamos la generación
 print("\n--- Iniciando la prueba de generación del informe con SQL corregido... ---")
 resultados = generador.generar(params=params)
-print("\n--- Proceso finalizado. ---")

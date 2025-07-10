@@ -93,7 +93,10 @@ def corregir_definiciones_atomicas(apps, schema_editor):
         estado='ACTIVO',
         parametros_requeridos={"params": ["provincia_id", "anio"]},
         config_visualizacion={
-            "plot_mapping": {"x": "{{ anio }}", "y": "gran_rubro"},
+            "plot_mapping": {
+                "x": "{{ anio }}",
+                "y": "gran_rubro"
+            },
             "layout": {
                 "title": {"text": "Top 5 Productos Exportados ({{ anio }})"},
                 "xaxis": {"title": {"text": "Millones USD FOB"}},
@@ -104,12 +107,14 @@ def corregir_definiciones_atomicas(apps, schema_editor):
             SELECT "{{ anio }}", gran_rubro
             FROM expo_por_provincia_top5
             WHERE provincia = (
-                SELECT provincia FROM ref_provincia 
+                SELECT provincia FROM ref_provincia
                 WHERE provincia_id = {{ provincia_id }}
             )
             ORDER BY "{{ anio }}" DESC LIMIT 5;
         """
     )
+
+    # --- SECCIÓN 2: Inversión en I+D en la Prov ---
 
     # --- Componente 2.1: Evolución de la inversión I+D regional y provincial (Gráfico de Líneas) ---
     grafico_evolucion_regional = Componente.objects.create(
@@ -125,7 +130,12 @@ def corregir_definiciones_atomicas(apps, schema_editor):
                 "color": "unidad_territorial"
             },
             "layout": {
-                "title": {"text": "Evolución de la inversión I+D (millones de pesos constantes 2004)"},
+                "title": {
+                    "text": (
+                        "Evolución de la inversión I+D "
+                        "(millones de pesos constantes 2004)"
+                    )
+                },
                 "xaxis": {"title": {"text": "Año"}},
                 "yaxis": {"title": {"text": "Monto (Pesos Constantes)"}}
             }
@@ -149,7 +159,10 @@ def corregir_definiciones_atomicas(apps, schema_editor):
         estado='ACTIVO',
         parametros_requeridos={"params": ["provincia_id", "anio"]},
         config_visualizacion={
-            "plot_mapping": {"x": "inversion_investigador", "y": "unidad_territorial"},
+            "plot_mapping": {
+                "x": "inversion_investigador",
+                "y": "unidad_territorial"
+            },
             "layout": {
                 "title": {"text": "Inversión por investigador en la región ({{ anio }})"},
                 "xaxis": {"title": {"text": "Inversión por Investigador (Pesos Constantes)"}},
@@ -177,7 +190,10 @@ def corregir_definiciones_atomicas(apps, schema_editor):
         estado='ACTIVO',
         parametros_requeridos={"params": ["provincia_id", "anio"]},
         config_visualizacion={
-            "plot_mapping": {"x": "monto_inversion", "y": "sector_clae"},
+            "plot_mapping": {
+                "x": "monto_inversion",
+                "y": "sector_clae"
+            },
             "layout": {
                 "title": {"text": "Inversión de empresas por sector ({{ anio }})"},
                 "xaxis": {"title": {"text": "Monto (Pesos Constantes)"}},
@@ -195,6 +211,8 @@ def corregir_definiciones_atomicas(apps, schema_editor):
             ORDER BY monto_inversion DESC;
         """
     )
+
+    # --- SECCIÓN 3: Proyectos de Federales de Innovación (PFI) ---
 
     # --- 3.1: KPIs de Cantidad de Proyectos ---
     kpi_pfi_nacional = Componente.objects.create(
@@ -285,7 +303,11 @@ def corregir_definiciones_atomicas(apps, schema_editor):
                 "columns": "vertical",
                 "values": "cantidad"
             },
-            "layout": {"title": {"text": "Proyectos PFI por Eje y Tecnología en {{ provincia_nombre }}"}}
+            "layout": {
+                "title": {
+                    "text": "Proyectos PFI por Eje y Tecnología en {{ provincia_nombre }}"
+                }
+            },
         },
         plantilla_sql="""
             SELECT tecnologias, vertical, COUNT(id_pfi) as cantidad
@@ -294,6 +316,602 @@ def corregir_definiciones_atomicas(apps, schema_editor):
                 WHERE provincia_id = {{ provincia_id }}
             )
             GROUP BY tecnologias, vertical;
+        """
+    )
+
+    # --- SECCIÓN 4: Capacidades en investigación y desarrollo ---
+
+    # --- SECCIÓN 4.1: Resultados ---
+    grafico_expo_intensidad = Componente.objects.create(
+        nombre="Composición de las exportaciones provinciales según intensidad tecnológica (%) ({{anio}})",
+        tipo_componente="GRAFICO",
+        tipo_grafico="pie",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "plot_mapping": {
+                "labels": "ITEnfoqueindustria",
+                "values": "fob_millones_uss",
+                "hole": .4
+            },
+            "layout": {
+                "title": {"text": "Exportaciones por Intensidad Tecnológica ({{anio}})"}
+            }
+        },
+        plantilla_sql="""
+            SELECT "ITEnfoqueindustria", SUM(fob_millones_uss) as fob_millones_uss
+            FROM expo_nivel_tecnologico_provincia_region_pais
+            WHERE unidad_territorial = (
+                SELECT provincia FROM ref_provincia
+                WHERE provincia_id = {{ provincia_id }}
+            )
+              AND anio = {{ anio }}
+            GROUP BY "ITEnfoqueindustria";
+        """
+    )
+
+    grafico_expo_evolucion = Componente.objects.create(
+        nombre="Evolución de las exportaciones con intensidad tecnológica (millones USD FOB) (2019 - {{anio}})",
+        tipo_componente="GRAFICO",
+        tipo_grafico="line",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "plot_mapping": {
+                "x": "anio",
+                "y": "total_fob",
+                "color": "unidad_territorial"
+            },
+            "layout": {
+                "title": {"text": "Evolución de Exportaciones Tecnológicas"},
+                "yaxis": {"title": {"text": "Millones USD FOB"}}
+            }
+        },
+        plantilla_sql="""
+            SELECT anio, unidad_territorial, SUM(fob_millones_uss) as total_fob
+            FROM expo_nivel_tecnologico_provincia_region_pais
+            WHERE anio BETWEEN ({{ anio }} - 4) AND {{ anio }}
+              AND unidad_territorial IN (
+                  (SELECT provincia FROM ref_provincia
+                   WHERE provincia_id = {{ provincia_id }}),
+                  (SELECT region_cofecyt FROM ref_provincia
+                   WHERE provincia_id = {{ provincia_id }}),
+                  'Total País'
+              )
+            GROUP BY anio, unidad_territorial
+            ORDER BY anio, unidad_territorial;
+        """
+    )
+
+    grafico_expo_destino = Componente.objects.create(
+        nombre="Distribución de exportaciones con intensidad tecnológica por país de destino (%) ({{anio}})",
+        tipo_componente="GRAFICO",
+        tipo_grafico="treemap",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "plot_mapping": {
+                "names": "pais_destino",
+                "values": "fob_total"
+            },
+            "layout": {"title": {"text": "Exportaciones Tecnológicas por País de Destino ({{anio}})"}}
+        },
+        plantilla_sql="""
+            SELECT pais_destino, SUM(fob_millones_sum) as fob_total
+            FROM expo_tecno_destino
+            WHERE cod_prov ILIKE (
+                SELECT provincia FROM ref_provincia
+                WHERE provincia_id = {{ provincia_id }}
+            ) AND anio = {{ anio }} AND intensidad_tecnologica = TRUE
+            GROUP BY pais_destino
+            ORDER BY fob_total DESC LIMIT 10;
+        """
+    )
+
+    kpi_patentes_arg = Componente.objects.create(
+        nombre="Cantidad de patentes de solicitantes argentinos (2014-{{anio}})",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["anio"]},
+        config_visualizacion={"format": "int"},
+        plantilla_sql="""
+            SELECT COUNT(DISTINCT lens_id) FROM patentes_desagregadas_ipc_provincia_region_pais
+            WHERE anio BETWEEN 2014 AND {{ anio }};
+        """
+    )
+
+    kpi_patentes_cyt_arg = Componente.objects.create(
+        nombre="Cantidad de patentes solicitadas por instituciones de CyT argentinas (2014-{{anio}})",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["anio"]},
+        config_visualizacion={"format": "int"},
+        plantilla_sql="""
+            SELECT COUNT(DISTINCT lens_id) FROM patentes_desagregadas_ipc_provincia_region_pais
+            WHERE anio BETWEEN 2014 AND {{ anio }}
+              AND provincia != 'NA';
+        """
+    )
+
+    kpi_patentes_cyt_prov = Componente.objects.create(
+        nombre="Cantidad de patentes solicitadas por instituciones de CyT provinciales (2014-{{anio}})",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={"format": "int"},
+        plantilla_sql="""
+            SELECT COUNT(DISTINCT lens_id) FROM patentes_desagregadas_ipc_provincia_region_pais
+            WHERE provincia = (
+                SELECT provincia
+                FROM ref_provincia
+                WHERE provincia_id = {{ provincia_id }}
+            )
+              AND anio BETWEEN 2014 AND {{ anio }}
+              AND es_institucion_nacional = FALSE;
+        """
+    )
+
+    grafico_patentes_evolucion = Componente.objects.create(
+        nombre="Evolución de la cantidad de patentes solicitadas por instituciones de CTI provinciales (2014-{{anio}})",
+        tipo_componente="GRAFICO",
+        tipo_grafico="line",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "plot_mapping": {"x": "anio", "y": "cantidad"},
+            "layout": {
+                "title": {
+                    "text": (
+                        "Evolución de la cantidad de patentes solicitadas por instituciones de CTI provinciales (2014-{{anio}})"
+                    )
+                },
+                "yaxis": {"title": {"text": "Patentes Solicitadas"}}
+            }
+        },
+        plantilla_sql="""
+            SELECT anio, COUNT(DISTINCT lens_id) as cantidad
+            FROM patentes_desagregadas_ipc_provincia_region_pais
+            WHERE provincia = (
+                SELECT provincia
+                FROM ref_provincia
+                WHERE provincia_id = {{ provincia_id }}
+            )
+              AND anio BETWEEN 2014 AND {{ anio }}
+              AND es_institucion_nacional = FALSE
+            GROUP BY anio ORDER BY anio;
+        """
+    )
+
+    # Quitar label del index ("institucion") de la tabla de patentes por sector
+    tabla_patentes_sector = Componente.objects.create(
+        nombre="Cantidad de patentes solicitadas por inst. de CTI provinciales por sector de tecnología (2014-{{anio}})",
+        tipo_componente="TABLA",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "pivot": {
+                "index": "institucion",
+                "columns": "letra_ipc_descripcion",
+                "values": "cantidad"
+            },
+            "layout": {
+                "title": {
+                    "text": "Cantidad de patentes solicitadas por inst. de CTI provinciales por sector de tecnología (2014-{{anio}})"
+                }
+            }
+        },
+        plantilla_sql="""
+            SELECT institucion, letra_ipc_descripcion, COUNT(DISTINCT lens_id) as cantidad
+            FROM patentes_desagregadas_ipc_provincia_region_pais
+            WHERE provincia = (
+                SELECT provincia FROM ref_provincia
+                WHERE provincia_id = {{ provincia_id }})
+              AND anio BETWEEN 2014 AND {{ anio }}
+              AND es_institucion_nacional = FALSE
+              AND institucion != 'NA'
+            GROUP BY institucion, letra_ipc_descripcion;
+        """
+    )
+
+    grafico_produccion_evolucion = Componente.objects.create(
+        nombre="Evolución de la producción científica provincial (2019 - {{anio}})",
+        tipo_componente="GRAFICO",
+        tipo_grafico="line",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "plot_mapping": {
+                "x": "anio_publica",
+                "y": "cantidad",
+                "color": "unidad_territorial"
+            },
+            "layout": {
+                "title": {
+                    "text": "Evolución de la producción científica provincial (2019 - {{anio}})"
+                },
+                "yaxis": {"title": {"text": "Cantidad de Productos"}}
+            },
+        },
+        plantilla_sql="""
+            SELECT anio_publica, unidad_territorial, COUNT(DISTINCT producto_id) as cantidad
+            FROM productos_provincia_region_pais_renaprod
+            WHERE anio_publica BETWEEN ({{ anio }} - 4) AND {{ anio }}
+              AND unidad_territorial IN (
+                  (SELECT provincia FROM ref_provincia WHERE provincia_id = {{ provincia_id }}),
+                  (SELECT region_cofecyt FROM ref_provincia WHERE provincia_id = {{ provincia_id }}),
+                  'Total País'
+              )
+            GROUP BY anio_publica, unidad_territorial;
+        """
+    )
+
+    grafico_produccion_tipo = Componente.objects.create(
+        nombre="Distribución de publicaciones científicas por tipo ({{anio}})",
+        tipo_componente="GRAFICO",
+        tipo_grafico="treemap",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "plot_mapping": {
+                "names": "tipo_producto_cientifico",
+                "values": "cantidad"
+            },
+            "layout": {
+                "title": {
+                    "text": "Distribución de publicaciones científicas por tipo ({{anio}})"
+                }
+            },
+        },
+        plantilla_sql="""
+            SELECT tipo_producto_cientifico, COUNT(DISTINCT producto_id) as cantidad
+            FROM productos_provincia_region_pais_renaprod
+            WHERE unidad_territorial = (
+                SELECT provincia FROM ref_provincia
+                WHERE provincia_id = {{ provincia_id }}
+            ) AND anio_publica = {{ anio }}
+            GROUP BY tipo_producto_cientifico;
+        """
+    )
+
+    # Quitar label del index ("revistas_sjr") de la tabla de artículos Q1-Q2
+    tabla_articulos_q1_q2 = Componente.objects.create(
+        nombre="Cantidad de artículos publicados en revistas Q1-Q2 (2019 - {{anio}})",
+        tipo_componente="TABLA",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "pivot": {
+                "index": "revista_sjr",
+                "columns": "unidad_territorial",
+                "values": "cantidad"
+            },
+            "layout": {
+                "title": {
+                    "text": "Artículos publicados en revistas Q1 y Q2 (2019 - {{anio}})"
+                },
+            },
+        },
+        plantilla_sql="""
+            SELECT revista_sjr, unidad_territorial, COUNT(DISTINCT producto_id) as cantidad
+            FROM productos_provincia_region_pais_renaprod
+            WHERE anio_publica BETWEEN ({{ anio }} - 4) AND {{ anio }}
+              AND revista_sjr IN ('Q1', 'Q2')
+              AND unidad_territorial IN (
+                  (SELECT provincia FROM ref_provincia WHERE provincia_id = {{ provincia_id }}),
+                  (SELECT region_cofecyt FROM ref_provincia WHERE provincia_id = {{ provincia_id }}),
+                  'Total País'
+              )
+            GROUP BY revista_sjr, unidad_territorial;
+        """
+    )
+
+    # Borrar labels eje X, corregir labels en barras para que muestren el porcentaje
+    grafico_publicaciones_area = Componente.objects.create(
+        nombre="Distribución de publicaciones científicas por gran área de conocimiento ({{anio}})",
+        tipo_componente="GRAFICO",
+        tipo_grafico="barh",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "plot_mapping": {
+                "y": "gran_area",
+                "x": "porcentaje"
+            },
+            "layout": {
+                "title": {"text": "Publicaciones científicas por área de conocimiento ({{anio}})"},
+                "xaxis": {"ticksuffix": "%"}
+            }
+        },
+        plantilla_sql="""
+            WITH total_general AS (
+                SELECT COUNT(producto_id) as total FROM productos_provincia_region_pais_renaprod
+                WHERE unidad_territorial = (
+                    SELECT provincia FROM ref_provincia
+                    WHERE provincia_id = {{ provincia_id }}
+                ) AND anio_publica = {{ anio }}
+            )
+            SELECT gran_area, (COUNT(DISTINCT producto_id) * 100.0 / (SELECT total FROM total_general)) as porcentaje
+            FROM productos_provincia_region_pais_renaprod
+            WHERE unidad_territorial = (
+                SELECT provincia FROM ref_provincia
+                WHERE provincia_id = {{ provincia_id }}
+            ) AND anio_publica = {{ anio }} AND gran_area IS NOT NULL
+            GROUP BY gran_area
+            ORDER BY porcentaje DESC;
+        """
+    )
+
+    # --- SECCIÓN 4.2: Infraestructura clave ---
+    kpi_unidades_id_prov = Componente.objects.create(
+        nombre="Cantidad de Unidades de I+D provinciales ({{anio}})",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={"format": "int"},
+        plantilla_sql="""
+            SELECT COUNT(organizacion_id) FROM listado_unidades_de_id
+            WHERE provincia = (SELECT provincia FROM ref_provincia WHERE provincia_id = {{ provincia_id }});
+        """
+    )
+
+    grafico_unidades_por_inst = Componente.objects.create(
+        nombre="Cantidad de unidades de I+D provinciales por institución de CyT ({{anio}})",
+        tipo_componente="GRAFICO",
+        tipo_grafico="barh",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "plot_mapping": {
+                "y": "nivel_1",
+                "x": "cantidad"
+            },
+            "layout": {
+                "title": {"text": "Unidades de I+D por Institución ({{anio}})"},
+                "yaxis": {"title": {"text": ""}}
+            }
+        },
+        plantilla_sql="""
+            SELECT nivel_1, COUNT(organizacion_id) as cantidad
+            FROM listado_unidades_de_id
+            WHERE provincia = (SELECT provincia FROM ref_provincia WHERE provincia_id = {{ provincia_id }})
+            GROUP BY nivel_1 ORDER BY cantidad ASC;
+        """
+    )
+
+    kpi_equipos_nacional = Componente.objects.create(
+        nombre="Cantidad de equipos I+D a nivel nacional ({{anio}})",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={},
+        config_visualizacion={"format": "int"},
+        plantilla_sql="SELECT SUM(cant_equipos) FROM equipos_ssnn_provincia_region_pais WHERE nivel_agregacion = 'País';"
+    )
+
+    kpi_equipos_regional = Componente.objects.create(
+        nombre="Cantidad de equipos I+D a nivel regional ({{anio}})",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id"]},
+        config_visualizacion={"format": "int"},
+        plantilla_sql="""
+            SELECT SUM(cant_equipos) FROM equipos_ssnn_provincia_region_pais
+            WHERE nivel_agregacion = 'Región' AND unidad_territorial = (
+                SELECT region_cofecyt FROM ref_provincia WHERE provincia_id = {{ provincia_id }}
+            );
+        """
+    )
+
+    kpi_equipos_provincial = Componente.objects.create(
+        nombre="Cantidad de equipos I+D a nivel provincial ({{anio}})",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id"]},
+        config_visualizacion={"format": "int"},
+        plantilla_sql="""
+            SELECT SUM(cant_equipos) FROM equipos_ssnn_provincia_region_pais
+            WHERE nivel_agregacion = 'Provincia' AND unidad_territorial = (
+                SELECT provincia FROM ref_provincia WHERE provincia_id = {{ provincia_id }}
+            );
+        """
+    )
+
+    grafico_equipos_por_tipo = Componente.objects.create(
+        nombre="Cantidad de equipos I+D por tipo ({{anio}})",
+        tipo_componente="GRAFICO",
+        tipo_grafico="barh",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id"]},
+        config_visualizacion={
+            "plot_mapping": {
+                "y": "sistema_nacional",
+                "x": "total_equipos"
+            },
+            "layout": {
+                "title": {"text": "Equipos de I+D por Tipo ({{anio}})"},
+                "yaxis": {"title": {"text": ""}}
+            },
+        },
+        plantilla_sql="""
+            SELECT sistema_nacional, SUM(cant_equipos) as total_equipos
+            FROM equipos_ssnn_provincia_region_pais
+            WHERE nivel_agregacion = 'Provincia' AND unidad_territorial = (
+                SELECT provincia FROM ref_provincia WHERE provincia_id = {{ provincia_id }}
+            )
+            GROUP BY sistema_nacional ORDER BY total_equipos DESC;
+        """
+    )
+
+    # --- INICIO: Componentes para la Sección 4.3: Talento en Acción ---
+
+    grafico_distribucion_investigadores = Componente.objects.create(
+        nombre="Distribución de investigadores por gran área de conocimiento (%) ({{anio}})",
+        tipo_componente="GRAFICO",
+        tipo_grafico="barh",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "plot_mapping": {
+                "y": "gran_area_experticia",
+                "x": "porcentaje"
+            },
+            "layout": {
+                "title": {"text": "Investigadores por Área de Conocimiento (%) ({{anio}})"},
+                "xaxis": {"ticksuffix": "%"}
+            }
+        },
+        plantilla_sql="""
+            WITH total_general AS (
+                SELECT SUM(cant_personas) as total FROM rrhh_sicytar_agregado_provincia_region_pais
+                WHERE tipo_personal_sicytar = 'INVESTIGADOR' AND nivel_agregacion = 'Provincia'
+                  AND unidad_territorial = (SELECT provincia FROM ref_provincia WHERE provincia_id = {{ provincia_id }})
+                  AND anio = {{ anio }}
+            )
+            SELECT gran_area_experticia, (SUM(cant_personas) * 100.0 / (SELECT total FROM total_general)) as porcentaje
+            FROM rrhh_sicytar_agregado_provincia_region_pais
+            WHERE tipo_personal_sicytar = 'INVESTIGADOR' AND nivel_agregacion = 'Provincia'
+              AND unidad_territorial = (SELECT provincia FROM ref_provincia WHERE provincia_id = {{ provincia_id }})
+              AND anio = {{ anio }} AND gran_area_experticia IS NOT NULL
+            GROUP BY gran_area_experticia ORDER BY porcentaje DESC;
+        """
+    )
+
+    kpi_tasa_pea_provincial = Componente.objects.create(
+        nombre="Cantidad de investigadores por cada 1.000 habitantes de la PEA provincial ({{anio}})",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={"format": "float"},
+        plantilla_sql="""
+            SELECT
+                (
+                    SELECT SUM(cant_personas) FROM rrhh_sicytar_agregado_provincia_region_pais
+                    WHERE tipo_personal_sicytar = 'INVESTIGADOR' AND anio = {{ anio }}
+                      AND nivel_agregacion = 'Provincia'
+                      AND unidad_territorial = (
+                        SELECT provincia FROM ref_provincia
+                        WHERE provincia_id = {{ provincia_id }}
+                      )
+                ) / (
+                    SELECT pea_miles_censo_2022 FROM indicadores_contexto_y_sicytar
+                    WHERE id = {{ provincia_id }}
+                );
+        """
+    )
+
+    kpi_tasa_pea_regional = Componente.objects.create(
+        nombre="Cantidad de investigadores por cada 1.000 habitantes de la PEA regional ({{anio}})",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={"format": "float"},
+        plantilla_sql="""
+            SELECT
+                (
+                    SELECT SUM(cant_personas) FROM rrhh_sicytar_agregado_provincia_region_pais
+                    WHERE tipo_personal_sicytar = 'INVESTIGADOR' AND anio = {{ anio }}
+                      AND nivel_agregacion = 'Región'
+                      AND unidad_territorial = (
+                        SELECT region_cofecyt
+                        FROM ref_provincia
+                        WHERE provincia_id = {{ provincia_id }}
+                    )
+                ) / (
+                    SELECT pea_miles_censo_2022 FROM indicadores_contexto_y_sicytar
+                    WHERE provincia = (
+                        SELECT region_cofecyt
+                        FROM ref_provincia
+                        WHERE provincia_id = {{ provincia_id }}
+                    )
+                );
+        """
+    )
+
+    kpi_tasa_pea_nacional = Componente.objects.create(
+        nombre="Cantidad de investigadores por cada 1.000 habitantes de la PEA nacional ({{anio}})",
+        tipo_componente="KPI", estado='ACTIVO',
+        parametros_requeridos={"params": ["anio"]},
+        config_visualizacion={"format": "float"},
+        plantilla_sql="""
+            SELECT
+                (
+                    SELECT SUM(cant_personas) FROM rrhh_sicytar_agregado_provincia_region_pais
+                    WHERE tipo_personal_sicytar = 'INVESTIGADOR' AND anio = {{ anio }} AND nivel_agregacion = 'País'
+                ) / (
+                    SELECT pea_miles_censo_2022 FROM indicadores_contexto_y_sicytar
+                    WHERE id = 99
+                );
+        """
+    )
+
+    tabla_personas_por_funcion = Componente.objects.create(
+        nombre="Cantidad de personas dedicadas a I+D según función ({{anio}})",
+        tipo_componente="TABLA",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "headers": {
+                "values": "tipo_personal_sicytar",
+            },
+            "cells": {
+                "values": "cantidad"
+            },
+            "layout": {"title": {"text": "Personas dedicadas a I+D por Función ({{anio}})"}}
+        },
+        plantilla_sql="""
+            SELECT tipo_personal_sicytar, SUM(cant_personas) as cantidad
+            FROM rrhh_sicytar_agregado_provincia_region_pais
+            WHERE nivel_agregacion = 'Provincia'
+              AND unidad_territorial = (
+                SELECT provincia FROM ref_provincia
+                WHERE provincia_id = {{ provincia_id }}
+              )
+              AND anio = {{ anio }}
+            GROUP BY tipo_personal_sicytar;
+        """
+    )
+
+    grafico_evolucion_investigadores = Componente.objects.create(
+        nombre="Evolución de cantidad de investigadores (2019-{{anio}})",
+        tipo_componente="GRAFICO",
+        tipo_grafico="line",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["provincia_id", "anio"]},
+        config_visualizacion={
+            "plot_mapping": {
+                "x": "anio",
+                "y": "cantidad_investigadores"
+            },
+            "layout": {"title": {"text": "Evolución de la Cantidad de Investigadores (2019-{{anio}})"}}
+        },
+        plantilla_sql="""
+            SELECT anio, SUM(cant_personas) as cantidad_investigadores
+            FROM rrhh_sicytar_agregado_provincia_region_pais
+            WHERE unidad_territorial = (
+                SELECT provincia FROM ref_provincia WHERE provincia_id = {{ provincia_id }}
+            ) AND tipo_personal_sicytar = 'INVESTIGADOR'
+              AND anio BETWEEN 2019 AND {{ anio }}
+            GROUP BY anio ORDER BY anio;
+        """
+    )
+
+    # --- INICIO: Componentes para la Sección 5: Ciencia y Sociedad ---
+
+    grafico_percepcion_calidad_vida = Componente.objects.create(
+        nombre="Porcentaje de población que considera que la CTI contribuye totalmente a la calidad de vida por provincia (%) ({{anio}})",
+        tipo_componente="GRAFICO",
+        tipo_grafico="barh",
+        estado='ACTIVO',
+        parametros_requeridos={"params": ["anio"]},
+        config_visualizacion={
+            "plot_mapping": {
+                "y": "unidad_territorial",
+                "x": "valor"
+            },
+            "layout": {
+                "title": {"text": "Percepción de la población respecto de contribución de la CTI a la Calidad de Vida ({{anio}})"},
+                "xaxis": {"ticksuffix": "%", "title": {"text": "% que cree que contribuye Totalmente"}},
+                "yaxis": {"autorange": "reversed"}
+            }
+        },
+        plantilla_sql="""
+            SELECT unidad_territorial, valor
+            FROM percepcion_final
+            WHERE anio = {{ anio }}
+              AND nivel_agregacion = 'Provincia'
+              AND indicador ILIKE '%contribuyen a mejorar la calidad de vida%'
+              AND variable = '10- Contribuyen totalmente'
+            ORDER BY valor DESC;
         """
     )
 
@@ -310,22 +928,47 @@ def corregir_definiciones_atomicas(apps, schema_editor):
     InformeComposicion.objects.filter(informe=informe_panorama).delete()
 
     # Añadimos los componentes al informe
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_poblacion_prov, orden=10)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_actividad_prov, orden=20)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_actividad_nac, orden=21)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_desempleo_prov, orden=30)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_desempleo_nac, orden=31)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_expo_top5, orden=40)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_evolucion_regional, orden=200)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_inv_por_investigador, orden=210)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_inv_empresaria_sector, orden=220)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_pfi_nacional, orden=300)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_pfi_regional, orden=301)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_pfi_provincial, orden=302)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_porc_privada_nacional, orden=310)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_porc_privada_regional, orden=311)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_porc_privada_provincial, orden=312)
-    InformeComposicion.objects.create(informe=informe_panorama, componente=tabla_pfi_cruce, orden=320)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_poblacion_prov, orden=1001)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_actividad_prov, orden=1002)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_actividad_nac, orden=1003)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_desempleo_prov, orden=1004)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_desempleo_nac, orden=1005)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_expo_top5, orden=1006)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_evolucion_regional, orden=2006)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_inv_por_investigador, orden=2007)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_inv_empresaria_sector, orden=2008)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_pfi_nacional, orden=3001)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_pfi_regional, orden=3002)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_pfi_provincial, orden=3003)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_porc_privada_nacional, orden=3004)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_porc_privada_regional, orden=3005)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_porc_privada_provincial, orden=3006)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=tabla_pfi_cruce, orden=3007)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_expo_intensidad, orden=4101)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_expo_evolucion, orden=4102)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_expo_destino, orden=4103)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_patentes_arg, orden=4104)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_patentes_cyt_arg, orden=4105)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_patentes_cyt_prov, orden=4106)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_patentes_evolucion, orden=4107)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=tabla_patentes_sector, orden=4108)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_produccion_evolucion, orden=4109)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_produccion_tipo, orden=4110)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=tabla_articulos_q1_q2, orden=4111)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_publicaciones_area, orden=4112)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_unidades_id_prov, orden=4201)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_unidades_por_inst, orden=4202)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_equipos_nacional, orden=4203)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_equipos_regional, orden=4204)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_equipos_provincial, orden=4205)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_equipos_por_tipo, orden=4206)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_distribucion_investigadores, orden=4301)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_pea_provincial, orden=4302)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_pea_regional, orden=4303)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=kpi_tasa_pea_nacional, orden=4304)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=tabla_personas_por_funcion, orden=4305)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_evolucion_investigadores, orden=4306)
+    InformeComposicion.objects.create(informe=informe_panorama, componente=grafico_percepcion_calidad_vida, orden=5001)
 
 
 class Migration(migrations.Migration):

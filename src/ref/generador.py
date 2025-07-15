@@ -1,6 +1,8 @@
 import logging
 import pandas as pd
-# import json
+import plotly.express as px
+import json
+import numpy as np
 
 from .models import Informe
 from datos_fuente.data_handler import ejecutar_consulta_parametrizada
@@ -8,6 +10,17 @@ from jinja2 import Environment, meta
 
 
 logger = logging.getLogger(__name__)
+
+
+class NumpyEncoder(json.JSONEncoder):
+    """
+    Clase personalizada para enseñarle a `json.dumps` cómo manejar
+    objetos que no son nativos de JSON, como los arrays de NumPy.
+    """
+    def default(self, obj):
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()  # Convierte el array de NumPy a una lista de Python
+        return json.JSONEncoder.default(self, obj)
 
 
 class GeneradorInforme:
@@ -165,12 +178,24 @@ class GeneradorInforme:
                 'hole': mapping.get("hole", 0)
             })
         elif subtipo == 'treemap':
-            traces.append({
-                'labels': df[mapping['names']].to_list(),
-                'parents': df.get(mapping.get('parents'), ""),
-                'values': df[mapping['values']].to_list(),
-                'type': 'treemap'
-            })
+            fig = px.treemap(
+                    df,
+                    path=[df.iloc[:, 0]],
+                    values=df[mapping['values']]
+                )
+            fig.update_traces(root_color="white")
+            fig.update_layout(margin=dict(t=50, l=25, r=25, b=25))
+            traces = []
+            for trace in fig.data:
+                # 2. Convertimos cada traza a un diccionario y extraemos sus datos como listas
+                #    Esto fuerza la conversión de cualquier formato interno (como bdata) a una lista simple.
+                trace_dict = {
+                    'type': trace.type,
+                    'labels': list(getattr(trace, 'labels', [])),
+                    'values': list(getattr(trace, 'values', [])),
+                    'parents': list(getattr(trace, 'parents', [])),
+                }
+                traces.append(trace_dict)
 
         return {"data": traces, "layout": layout_config}
 

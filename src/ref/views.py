@@ -4,7 +4,6 @@ from datos_fuente.models import Provincia
 # from .models import Informe
 from .generador import GeneradorInforme
 import logging
-import json
 
 logger = logging.getLogger(__name__)
 

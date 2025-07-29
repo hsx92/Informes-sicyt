@@ -1,12 +1,11 @@
 import logging
-import pandas as pd
-import plotly.express as px
 import json
+import pandas as pd
 import numpy as np
-
+import plotly.express as px
+from jinja2 import Environment, meta
 from .models import Informe
 from datos_fuente.data_handler import ejecutar_consulta_parametrizada
-from jinja2 import Environment, meta
 
 
 logger = logging.getLogger(__name__)

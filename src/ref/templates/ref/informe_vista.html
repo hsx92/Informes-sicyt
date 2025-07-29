@@ -1,115 +1,113 @@
-{% load render_utils %}
+    {% load render_utils %}
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ informe.nombre }} - {{ params.provincia_nombre }}</title>
-    
-    <!-- Incluimos la librería de Plotly UNA SOLA VEZ, al principio -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    
-    <!-- Estilos básicos para una presentación limpia y profesional -->
-    <style>
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
-            line-height: 1.6; 
-            color: #333; 
-            background-color: #f4f7f9;
-            max-width: 1024px; 
-            margin: 20px auto; 
-            padding: 0 15px; 
-        }
-        h1, h2 { 
-            color: #2c3e50; 
-            border-bottom: 2px solid #ecf0f1; 
-            padding-bottom: 10px;
-            font-weight: 400;
-        }
-        .informe-header { 
-            text-align: center; 
-            margin-bottom: 40px; 
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .informe-header h1 {
-            border-bottom: none;
-            margin: 0;
-        }
-        .componente { 
-            background-color: #ffffff; 
-            border: 1px solid #ecf0f1; 
-            border-radius: 8px; 
-            padding: 25px; 
-            margin-bottom: 30px; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
-        }
-        .kpi { 
-            font-size: 2.8em; 
-            font-weight: bold; 
-            color: #3498db; 
-            text-align: center; 
-            margin: 15px 0; 
-        }
-        .kpi-label { 
-            font-size: 0.4em; 
-            color: #7f8c8d; 
-            display: block; 
-            font-weight: 400;
-            margin-top: 5px;
-        }
-        .visualizacion-container {
-            width: 100%;
-            min-height: 450px;
-        }
-    </style>
-</head>
-<body>
-
-    <header class="informe-header">
-        <h1>{{ informe.nombre }}</h1>
-        <p>Análisis para <strong>{{ params.provincia_nombre }}</strong> (Año de referencia: {{ params.anio }})</p>
-    </header>
-
-    <!-- PASO A: Creamos los contenedores vacíos para cada componente -->
-    {% for comp in resultados %}
-        <section class="componente">
-            <h2>{{ comp.nombre }}</h2>
-            <div id="componente-{{ comp.orden }}"></div>
-        </section>
-    {% endfor %}
-
-    <!-- 
-      PASO B: Convertimos la lista 'resultados' a JSON de forma segura 
-      usando la etiqueta de plantilla 'json_script'. Esto crea un tag <script>
-      con el id "resultados-data" que contiene nuestros datos.
-    -->
-    {{ resultados|json_script:"resultados-data" }}
-
-    <!-- PASO C: Un único script al final que lee los datos y renderiza todo -->
-    <script>
-        // Leemos los datos desde el script que generó Django
-        const resultados = JSON.parse(document.getElementById('resultados-data').textContent);
-
-        resultados.forEach(comp => {
-            const container = document.getElementById(`componente-${comp.orden}`);
-            if (!container) return;
-
-            if (comp.tipo === 'KPI') {
-                // Para los KPIs, construimos el HTML directamente
-                container.innerHTML = `
-                    <div class="kpi">
-                        ${comp.resultado}
-                        <span class="kpi-label">${comp.nombre}</span>
-                    </div>`;
-            } else if ((comp.tipo === 'GRAFICO' || comp.tipo === 'TABLA') && comp.resultado) {
-                // Para visualizaciones, usamos Plotly con los datos y layout que preparamos en Python
-                Plotly.newPlot(container, comp.resultado.data, comp.resultado.layout);
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ informe.nombre }} - {{ params.provincia_nombre }}</title>
+        
+        <!-- Incluimos la librería de Plotly UNA SOLA VEZ, al principio -->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        
+        <!-- Estilos básicos para una presentación limpia y profesional -->
+        <style>
+            body { 
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+                line-height: 1.6; 
+                color: #333; 
+                background-color: #f4f7f9;
+                max-width: 1024px; 
+                margin: 20px auto; 
+                padding: 0 15px; 
             }
-        });
-    </script>
-</body>
-</html>
+            h1, h2 { 
+                color: #2c3e50; 
+                border-bottom: 2px solid #ecf0f1; 
+                padding-bottom: 10px;
+                font-weight: 400;
+            }
+            .informe-header { 
+                text-align: center; 
+                margin-bottom: 40px; 
+                padding: 20px;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            }
+            .informe-header h1 {
+                border-bottom: none;
+                margin: 0;
+            }
+            .componente { 
+                background-color: #ffffff; 
+                border: 1px solid #ecf0f1; 
+                border-radius: 8px; 
+                padding: 25px; 
+                margin-bottom: 30px; 
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+            }
+            .kpi { 
+                font-size: 2.8em; 
+                font-weight: bold; 
+                color: #3498db; 
+                text-align: center; 
+                margin: 15px 0; 
+            }
+            .kpi-label { 
+                font-size: 0.4em; 
+                color: #7f8c8d; 
+                display: block; 
+                font-weight: 400;
+                margin-top: 5px;
+            }
+            .visualizacion-container {
+                width: 100%;
+                min-height: 450px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <header class="informe-header">
+            <h1>{{ informe.nombre }}</h1>
+            <p>Análisis para <strong>{{ params.provincia_nombre }}</strong> (Año de referencia: {{ params.anio }})</p>
+        </header>
+
+        <!-- PASO A: Creamos los contenedores vacíos para cada componente -->
+        {% for comp in resultados %}
+            <section class="componente">
+                <div id="componente-{{ comp.orden }}"></div>
+            </section>
+        {% endfor %}
+
+        <!-- 
+        PASO B: Convertimos la lista 'resultados' a JSON de forma segura 
+        usando la etiqueta de plantilla 'json_script'. Esto crea un tag <script>
+        con el id "resultados-data" que contiene nuestros datos.
+        -->
+        {{ resultados|json_script:"resultados-data" }}
+
+        <!-- PASO C: leer los datos y renderizar todo -->
+        <script>
+            const resultados = JSON.parse(document.getElementById('resultados-data').textContent);
+
+            resultados.forEach(comp => {
+                const container = document.getElementById(`componente-${comp.orden}`);
+                if (!container) return;
+
+                if (comp.tipo === 'KPI') {
+                    // Para los KPIs, construimos el HTML directamente
+                    container.innerHTML = `
+                        <div class="kpi">
+                            ${comp.resultado}
+                            <span class="kpi-label">${comp.nombre}</span>
+                        </div>`;
+                } else if ((comp.tipo === 'GRAFICO' || comp.tipo === 'TABLA') && comp.resultado) {
+                    // Para visualizaciones, usamos Plotly con los datos y layout que preparamos en Python
+                    Plotly.newPlot(container, comp.resultado.data, comp.resultado.layout);
+                }
+            });
+        </script>
+    </body>
+    </html>
